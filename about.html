@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — My Inner Window</title>
+  <meta name="description" content="Learn about My Inner Window — free personality tests backed by psychology to help you understand yourself better.">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪟</text></svg>">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+
+  <style>
+    .about {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: var(--space-4xl) var(--space-lg);
+    }
+
+    .about h1 {
+      text-align: center;
+      margin-bottom: var(--space-md);
+    }
+
+    .about__tagline {
+      text-align: center;
+      font-size: var(--fs-lg);
+      color: var(--text-muted);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .about section {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .about h2 {
+      font-size: var(--fs-xl);
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .about p {
+      line-height: var(--lh-loose);
+      margin-bottom: var(--space-md);
+    }
+
+    .about ul {
+      margin-bottom: var(--space-md);
+    }
+
+    .about ul li {
+      position: relative;
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-sm);
+      color: var(--text-secondary);
+      font-size: var(--fs-base);
+      line-height: var(--lh-normal);
+    }
+
+    .about ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--accent-teal);
+    }
+
+    .about__cta {
+      text-align: center;
+      padding: var(--space-2xl) 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        ✦ <span>My Inner Window</span>
+      </a>
+      <div class="nav__hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="test.html" class="nav__link">Take Test</a>
+        <a href="about.html" class="nav__link nav__link--active">About</a>
+        <div class="auth-buttons" id="authButtons"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="about">
+      <h1>About <span class="text-gradient">My Inner Window</span></h1>
+      <p class="about__tagline">Helping you see yourself more clearly, one test at a time.</p>
+
+      <section>
+        <h2>Our Mission</h2>
+        <p>
+          My Inner Window was created with a simple belief: understanding yourself is the first step toward a better life. We provide free, accessible personality assessments that draw on well-established psychological frameworks to help you explore who you are at your core.
+        </p>
+        <p>
+          Whether you're navigating a career change, improving your relationships, or simply curious about what makes you tick, our tests offer a starting point for meaningful self-reflection.
+        </p>
+      </section>
+
+      <section>
+        <h2>What We Offer</h2>
+        <ul>
+          <li>Free personality tests based on established psychological models</li>
+          <li>Detailed type descriptions covering strengths, growth areas, and more</li>
+          <li>Optional premium insights for deeper understanding</li>
+          <li>Shareable results so you can compare types with friends</li>
+          <li>New tests and content added regularly</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>About Our Tests</h2>
+        <p>
+          Our flagship test is based on the Myers-Briggs Type Indicator (MBTI) framework, one of the most widely used personality assessment tools in the world. The test measures preferences across four dimensions: Extraversion/Introversion, Sensing/Intuition, Thinking/Feeling, and Judging/Perceiving.
+        </p>
+        <p>
+          While no personality test can capture the full complexity of who you are, the 16-type framework offers valuable insights into your natural tendencies, communication style, and areas for growth.
+        </p>
+        <p>
+          We're committed to expanding our offerings with additional assessments including the Enneagram, Big Five (OCEAN), and more.
+        </p>
+      </section>
+
+      <section>
+        <h2>Privacy & Data</h2>
+        <p>
+          We respect your privacy. Your quiz answers are processed entirely in your browser — we don't send your responses to any server. Results are stored locally on your device so you can revisit them anytime.
+        </p>
+        <p>
+          If you choose to subscribe to our newsletter, your email is the only personal information we collect, and we will never share it with third parties.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Have questions, feedback, or ideas for new tests? We'd love to hear from you. Reach out at <a href="mailto:hello@myinnerwindow.com">hello@myinnerwindow.com</a>.
+        </p>
+      </section>
+
+      <div class="about__cta">
+        <a href="test.html" class="btn btn--primary btn--lg">Take the Free Test</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <h3>✦ My Inner Window</h3>
+          <p>Free personality tests backed by psychology. Discover who you really are.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <h4>Tests</h4>
+            <a href="test.html">16 Personalities</a>
+            <a href="#">Enneagram (Soon)</a>
+            <a href="#">Big Five (Soon)</a>
+          </div>
+          <div class="footer__column">
+            <h4>Company</h4>
+            <a href="about.html">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 My Inner Window. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+
+  <!-- Auth Modal -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="auth-modal__close" id="authModalClose">&times;</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Log In</button>
+        <button class="auth-tab" data-tab="register">Sign Up</button>
+      </div>
+      <form class="auth-form active" id="loginForm">
+        <h2 class="auth-form__title">Welcome Back</h2>
+        <p class="auth-form__subtitle">Log in to your account</p>
+        <div class="auth-form__error"></div>
+        <div class="auth-field">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit">Log In</button>
+        <p class="auth-switch">Don't have an account? <a data-auth-switch="register">Sign up</a></p>
+      </form>
+      <form class="auth-form" id="registerForm">
+        <h2 class="auth-form__title">Create Account</h2>
+        <p class="auth-form__subtitle">Join My Inner Window</p>
+        <div class="auth-form__error"></div>
+        <div class="auth-field">
+          <label for="regName">Name</label>
+          <input type="text" id="regName" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="auth-field">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" placeholder="Create a password" autocomplete="new-password">
+          <ul class="pw-requirements">
+            <li id="req-length"><span class="pw-icon"></span> 8+ characters</li>
+            <li id="req-uppercase"><span class="pw-icon"></span> Uppercase</li>
+            <li id="req-lowercase"><span class="pw-icon"></span> Lowercase</li>
+            <li id="req-number"><span class="pw-icon"></span> Number</li>
+            <li id="req-special"><span class="pw-icon"></span> Special char</li>
+          </ul>
+        </div>
+        <div class="auth-field">
+          <label for="regConfirm">Confirm Password</label>
+          <input type="password" id="regConfirm" placeholder="Confirm your password" autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit">Create Account</button>
+        <p class="auth-switch">Already have an account? <a data-auth-switch="login">Log in</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

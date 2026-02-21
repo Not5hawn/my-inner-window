@@ -1,0 +1,274 @@
+/* ===========================
+   My Inner Window - Quiz Styles
+   =========================== */
+
+/* ---- Quiz Container ---- */
+.quiz {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+}
+
+.quiz__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.quiz__title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.quiz__desc {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+/* ---- Progress Bar ---- */
+.progress {
+  margin-bottom: var(--space-2xl);
+}
+
+.progress__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.progress__text {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.progress__count {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.progress__bar {
+  height: 6px;
+  background: var(--bg-card);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress__fill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+  position: relative;
+}
+
+.progress__fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  filter: blur(4px);
+}
+
+/* ---- Question Card ---- */
+.question-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.question-card--prev {
+  animation: slideInReverse 0.3s ease;
+}
+
+@keyframes slideInReverse {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.question__number {
+  font-size: var(--fs-xs);
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.question__text {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  color: var(--text-primary);
+  line-height: var(--lh-normal);
+  margin-bottom: var(--space-2xl);
+}
+
+/* ---- Likert Scale ---- */
+.likert {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.likert__option {
+  flex: 1;
+  position: relative;
+}
+
+.likert__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.likert__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.likert__label:hover {
+  border-color: var(--border-light);
+  background: rgba(168, 85, 247, 0.05);
+}
+
+.likert__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border-light);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.likert__text {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Selected state */
+.likert__input:checked + .likert__label {
+  border-color: var(--accent-purple);
+  background: rgba(168, 85, 247, 0.1);
+}
+
+.likert__input:checked + .likert__label .likert__dot {
+  background: var(--accent-purple);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+/* ---- Navigation Buttons ---- */
+.quiz__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.quiz__nav .btn {
+  min-width: 120px;
+}
+
+.quiz__nav-spacer {
+  flex: 1;
+}
+
+/* ---- Submit State ---- */
+.quiz__submit-section {
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.quiz__submit-section p {
+  margin-bottom: var(--space-lg);
+  color: var(--text-secondary);
+}
+
+/* ---- Sticky Bottom Ad ---- */
+.quiz-ad-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-dropdown);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(15, 14, 23, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border-color);
+}
+
+.ad-slot--sticky {
+  margin: 0 auto;
+  max-width: 728px;
+  min-height: 60px;
+  padding: var(--space-sm);
+}
+
+/* Extra bottom padding on main so content isn't hidden behind the sticky ad */
+.quiz {
+  padding-bottom: 100px;
+}
+
+/* ---- Responsive: Vertical Likert on Mobile ---- */
+@media (max-width: 640px) {
+  .likert {
+    flex-direction: column;
+  }
+
+  .likert__label {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .likert__dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .likert__text {
+    font-size: var(--fs-sm);
+  }
+
+  .question__text {
+    font-size: var(--fs-lg);
+  }
+
+  .question-card {
+    padding: var(--space-xl);
+  }
+}
