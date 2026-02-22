@@ -94,8 +94,39 @@
   --z-modal:    300;
   --z-overlay:  400;
 
+  /* ---- Header ---- */
+  --header-bg:        rgba(15, 14, 23, 0.85);
+  --header-mobile-bg: rgba(15, 14, 23, 0.98);
+
   /* ---- Layout ---- */
   --max-width:    1200px;
   --nav-height:   72px;
   --sidebar-width: 280px;
+}
+
+/* ---- Light Theme Overrides ---- */
+[data-theme="light"] {
+  --bg-primary:     #f5f5f7;
+  --bg-secondary:   #eeeef0;
+  --bg-card:        #ffffff;
+  --bg-card-hover:  #f0f0f2;
+
+  --text-primary:   #1a1a2e;
+  --text-secondary: #4a4a5a;
+  --text-muted:     #8888a0;
+
+  --border-color:   rgba(0, 0, 0, 0.1);
+  --border-light:   rgba(0, 0, 0, 0.15);
+
+  --gradient-hero:  linear-gradient(135deg, #f5f5f7 0%, #eeeef0 40%, #e8e8ec 100%);
+  --gradient-card:  linear-gradient(145deg, #ffffff, #f5f5f7);
+
+  --shadow-sm:   0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md:   0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg:   0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 20px rgba(168, 85, 247, 0.15);
+  --shadow-teal: 0 0 20px rgba(45, 212, 191, 0.15);
+
+  --header-bg:        rgba(245, 245, 247, 0.85);
+  --header-mobile-bg: rgba(245, 245, 247, 0.98);
 }

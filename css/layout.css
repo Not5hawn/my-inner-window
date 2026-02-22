@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: rgba(15, 14, 23, 0.85);
+  background: var(--header-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
@@ -109,6 +109,31 @@
 
 .nav__hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---- Theme Toggle ---- */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent-purple);
+  transform: scale(1.1);
+}
+
+.theme-toggle__icon {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 /* ---- Main ---- */
@@ -248,7 +273,7 @@ main {
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: rgba(15, 14, 23, 0.98);
+    background: var(--header-mobile-bg);
     backdrop-filter: blur(16px);
     flex-direction: column;
     padding: var(--space-xl);

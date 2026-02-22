@@ -3,11 +3,49 @@
    =========================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   initNav();
   initSmoothScroll();
   setActiveNavLink();
   if (typeof initAuth === 'function') initAuth();
 });
+
+/* ---- Theme Toggle ---- */
+function initTheme() {
+  const saved = localStorage.getItem('miw_theme');
+  let theme;
+
+  if (saved) {
+    theme = saved;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    theme = 'light';
+  } else {
+    theme = 'dark';
+  }
+
+  document.documentElement.setAttribute('data-theme', theme);
+  updateThemeIcon(theme);
+
+  const toggle = document.getElementById('themeToggle');
+  if (toggle) {
+    toggle.addEventListener('click', toggleTheme);
+  }
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('miw_theme', next);
+  updateThemeIcon(next);
+}
+
+function updateThemeIcon(theme) {
+  const icon = document.getElementById('themeIcon');
+  if (icon) {
+    icon.textContent = theme === 'dark' ? '\u{1F319}' : '\u{2600}\u{FE0F}';
+  }
+}
 
 /* ---- Mobile Nav Toggle ---- */
 function initNav() {

@@ -8,6 +8,15 @@
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪟</text></svg>">
 
+  <!-- Apply theme before render to prevent flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('miw_theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -30,6 +39,9 @@
         <a href="index.html" class="nav__link">Home</a>
         <a href="test.html" class="nav__link nav__link--active">Take Test</a>
         <a href="about.html" class="nav__link">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-toggle__icon" id="themeIcon">&#x1F319;</span>
+        </button>
         <div class="auth-buttons" id="authButtons"></div>
       </div>
     </nav>
