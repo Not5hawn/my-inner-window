@@ -121,8 +121,8 @@ function updateAuthUI() {
     });
   } else {
     container.innerHTML = `
-      <button class="btn btn--login" id="loginBtn">Log In</button>
-      <button class="btn btn--signup" id="signupBtn">Sign Up</button>`;
+      <button class="btn btn--signup" id="signupBtn">Sign Up</button>
+      <button class="btn btn--login" id="loginBtn">Log In</button>`;
     document.getElementById('loginBtn').addEventListener('click', () => openAuthModal('login'));
     document.getElementById('signupBtn').addEventListener('click', () => openAuthModal('register'));
   }
