@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5RZ4FEE1EX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5RZ4FEE1EX');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — My Inner Window</title>
+  <meta name="description" content="Privacy Policy for My Inner Window. Learn how we handle your data, cookies, and personal information.">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪟</text></svg>">
+
+  <!-- Apply theme before render to prevent flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('miw_theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+
+  <style>
+    .policy {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: var(--space-4xl) var(--space-lg);
+    }
+
+    .policy h1 {
+      text-align: center;
+      margin-bottom: var(--space-sm);
+    }
+
+    .policy__date {
+      text-align: center;
+      font-size: var(--fs-sm);
+      color: var(--text-muted);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .policy section {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .policy h2 {
+      font-size: var(--fs-xl);
+      margin-bottom: var(--space-md);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .policy p {
+      line-height: var(--lh-loose);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-md);
+    }
+
+    .policy ul {
+      margin-bottom: var(--space-md);
+    }
+
+    .policy ul li {
+      position: relative;
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-sm);
+      color: var(--text-secondary);
+      font-size: var(--fs-base);
+      line-height: var(--lh-normal);
+    }
+
+    .policy ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--accent-teal);
+    }
+
+    .policy a {
+      color: var(--accent-purple);
+      text-decoration: underline;
+    }
+
+    .policy a:hover {
+      color: var(--accent-teal);
+    }
+
+    .policy__highlight {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-md);
+    }
+
+    .policy__highlight p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        ✦ <span>My Inner Window</span>
+      </a>
+      <div class="nav__hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <div class="nav__dropdown">
+          <span class="nav__link nav__dropdown-trigger">Take a Test <span class="nav__caret">▾</span></span>
+          <div class="nav__dropdown-menu">
+            <a href="test.html" class="nav__dropdown-item">MBTI</a>
+            <a href="enneagram.html" class="nav__dropdown-item">Enneagram</a>
+            <a href="bigfive.html" class="nav__dropdown-item">Big Five (OCEAN)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav__link">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-toggle__icon" id="themeIcon">&#x1F319;</span>
+        </button>
+        <div class="auth-buttons" id="authButtons"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="policy">
+      <h1>Privacy <span class="text-gradient">Policy</span></h1>
+      <p class="policy__date">Last updated: February 22, 2026</p>
+
+      <div class="policy__highlight">
+        <p>
+          <strong>The short version:</strong> Your quiz answers never leave your device. We use Google Analytics to understand site traffic, and we collect your email only if you choose to subscribe. We do not sell your data.
+        </p>
+      </div>
+
+      <section>
+        <h2>1. Who We Are</h2>
+        <p>
+          My Inner Window ("we", "us", or "our") operates the website at <a href="https://myinnerwindow.com">myinnerwindow.com</a>. We provide free personality tests based on established psychological frameworks. You can contact us at <a href="mailto:hello@myinnerwindow.com">hello@myinnerwindow.com</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect</h2>
+
+        <h3 style="font-size: var(--fs-md); margin: var(--space-lg) 0 var(--space-sm);">Quiz Answers & Results</h3>
+        <p>
+          Your quiz answers are processed entirely within your browser. They are never transmitted to our servers. Results are stored in your browser's <code>sessionStorage</code> (cleared when you close your tab) and optionally in <code>localStorage</code> (retained between sessions on the same device) so you can revisit them. No quiz data ever leaves your device.
+        </p>
+
+        <h3 style="font-size: var(--fs-md); margin: var(--space-lg) 0 var(--space-sm);">Account Information</h3>
+        <p>
+          If you create an account, your name, email address, and a hashed version of your password are stored in your browser's <code>localStorage</code>. This information exists only on your device and is not stored on any server.
+        </p>
+
+        <h3 style="font-size: var(--fs-md); margin: var(--space-lg) 0 var(--space-sm);">Email Address</h3>
+        <p>
+          If you subscribe to our newsletter, your email address is collected and stored. We use it only to send you personality insights, updates, and new test announcements. We will never sell or share your email with third parties.
+        </p>
+
+        <h3 style="font-size: var(--fs-md); margin: var(--space-lg) 0 var(--space-sm);">Usage & Analytics Data</h3>
+        <p>
+          We use Google Analytics 4 to understand how visitors use our site. This service automatically collects:
+        </p>
+        <ul>
+          <li>Pages visited and time spent on each page</li>
+          <li>Referring website or search engine</li>
+          <li>Browser type, device type, and operating system</li>
+          <li>Approximate geographic location (country/city level, derived from IP address)</li>
+          <li>Interactions such as button clicks and form submissions</li>
+        </ul>
+        <p>
+          This data is aggregated and anonymized. We use it to improve the site experience. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. Cookies</h2>
+        <p>
+          We do not set any first-party cookies. Google Analytics 4 uses cookies to distinguish unique visitors and sessions. These cookies include:
+        </p>
+        <ul>
+          <li><strong>_ga</strong> — distinguishes users (expires after 2 years)</li>
+          <li><strong>_ga_XXXXXXXXXX</strong> — maintains session state (expires after 2 years)</li>
+        </ul>
+        <p>
+          You can opt out of Google Analytics tracking by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>, or by enabling "Do Not Track" in your browser settings.
+        </p>
+      </section>
+
+      <section>
+        <h2>4. How We Use Your Information</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Deliver and improve the personality tests and results experience</li>
+          <li>Understand which content and features are most valuable to visitors</li>
+          <li>Send newsletter updates if you have subscribed</li>
+          <li>Comply with legal obligations</li>
+        </ul>
+        <p>
+          We do not use your information for automated decision-making or profiling beyond what is necessary to display your test results locally in your browser.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Data Sharing</h2>
+        <p>
+          We do not sell, trade, or rent your personal information to third parties. We share data only in these limited circumstances:
+        </p>
+        <ul>
+          <li><strong>Google Analytics</strong> — anonymized usage data as described above</li>
+          <li><strong>Legal requirements</strong> — if required by law, court order, or governmental authority</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Data Storage & Security</h2>
+        <p>
+          Because quiz answers and account data are stored only in your browser's local storage, we have no server-side access to this information. You can clear this data at any time by clearing your browser's site data for myinnerwindow.com.
+        </p>
+        <p>
+          Email addresses collected through our newsletter form are stored securely. We take reasonable precautions to protect this information, though no method of transmission or storage is 100% secure.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Your Rights</h2>
+        <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+        <ul>
+          <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+          <li><strong>Deletion</strong> — request that we delete your personal data</li>
+          <li><strong>Opt-out</strong> — unsubscribe from our newsletter at any time</li>
+          <li><strong>Portability</strong> — request your data in a portable format</li>
+        </ul>
+        <p>
+          To exercise any of these rights, email us at <a href="mailto:hello@myinnerwindow.com">hello@myinnerwindow.com</a>. For data stored in your browser (quiz answers, account info), you can delete it directly by clearing your browser's local storage for this site.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Children's Privacy</h2>
+        <p>
+          My Inner Window is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the site after any changes constitutes your acceptance of the updated policy.
+        </p>
+      </section>
+
+      <section>
+        <h2>10. Contact</h2>
+        <p>
+          If you have any questions about this Privacy Policy or how we handle your data, please contact us at:
+        </p>
+        <p>
+          <strong>My Inner Window</strong><br>
+          <a href="mailto:hello@myinnerwindow.com">hello@myinnerwindow.com</a><br>
+          <a href="https://myinnerwindow.com">myinnerwindow.com</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <h3>✦ My Inner Window</h3>
+          <p>Free personality tests backed by psychology. Discover who you really are.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <h4>Tests</h4>
+            <a href="test.html">MBTI Test</a>
+            <a href="enneagram.html">Enneagram</a>
+            <a href="bigfive.html">Big Five (OCEAN)</a>
+          </div>
+          <div class="footer__column">
+            <h4>Company</h4>
+            <a href="about.html">About</a>
+            <a href="mailto:hello@myinnerwindow.com">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 My Inner Window. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+
+  <!-- Auth Modal -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="auth-modal__close" id="authModalClose">&times;</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Log In</button>
+        <button class="auth-tab" data-tab="register">Sign Up</button>
+      </div>
+      <form class="auth-form active" id="loginForm">
+        <h2 class="auth-form__title">Welcome Back</h2>
+        <p class="auth-form__subtitle">Log in to your account</p>
+        <div class="auth-form__error"></div>
+        <div class="auth-field">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit">Log In</button>
+        <p class="auth-switch">Don't have an account? <a data-auth-switch="register">Sign up</a></p>
+      </form>
+      <form class="auth-form" id="registerForm">
+        <h2 class="auth-form__title">Create Account</h2>
+        <p class="auth-form__subtitle">Join My Inner Window</p>
+        <div class="auth-form__error"></div>
+        <div class="auth-field">
+          <label for="regName">Name</label>
+          <input type="text" id="regName" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="auth-field">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" placeholder="Create a password" autocomplete="new-password">
+          <ul class="pw-requirements">
+            <li id="req-length"><span class="pw-icon"></span> 8+ characters</li>
+            <li id="req-uppercase"><span class="pw-icon"></span> Uppercase</li>
+            <li id="req-lowercase"><span class="pw-icon"></span> Lowercase</li>
+            <li id="req-number"><span class="pw-icon"></span> Number</li>
+            <li id="req-special"><span class="pw-icon"></span> Special char</li>
+          </ul>
+        </div>
+        <div class="auth-field">
+          <label for="regConfirm">Confirm Password</label>
+          <input type="password" id="regConfirm" placeholder="Confirm your password" autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit">Create Account</button>
+        <p class="auth-switch">Already have an account? <a data-auth-switch="login">Log in</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
