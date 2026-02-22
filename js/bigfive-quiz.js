@@ -105,11 +105,11 @@
 
     prevBtn.style.visibility = isFirst ? 'hidden' : 'visible';
 
-    if (isLast) {
+    if (isLast && hasAnswer) {
       nextBtn.textContent = 'See Results ✦';
       nextBtn.className = 'btn btn--primary btn--lg';
       nextBtn.style.display = '';
-      nextBtn.disabled = !hasAnswer;
+      nextBtn.disabled = false;
     } else {
       nextBtn.style.display = 'none';
     }
