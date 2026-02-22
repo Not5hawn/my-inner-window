@@ -11,8 +11,12 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBTI Personality Test — My Inner Window</title>
-  <meta name="description" content="Take our free 40-question MBTI personality test. Discover which of the 16 personality types you are.">
+  <title>Your Enneagram Results — My Inner Window</title>
+  <meta name="description" content="Discover your Enneagram personality type results. Explore your core motivations, strengths, and unlock premium insights.">
+
+  <meta property="og:title" content="I discovered my Enneagram type on My Inner Window!">
+  <meta property="og:description" content="Take the free Enneagram personality test and discover your type.">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪟</text></svg>">
 
@@ -29,7 +33,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/results.css">
   <link rel="stylesheet" href="css/auth.css">
 </head>
 <body>
@@ -45,7 +49,7 @@
       </div>
       <div class="nav__links">
         <a href="index.html" class="nav__link">Home</a>
-        <a href="test.html" class="nav__link nav__link--active">Take Test</a>
+        <a href="test.html" class="nav__link">Take Test</a>
         <a href="about.html" class="nav__link">About</a>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <span class="theme-toggle__icon" id="themeIcon">&#x1F319;</span>
@@ -56,46 +60,31 @@
   </header>
 
   <main>
-    <div class="quiz">
-      <!-- Quiz Header -->
-      <div class="quiz__header">
-        <h1 class="quiz__title">Myers-Briggs Type Indicator</h1>
-        <p class="quiz__desc">Answer each question honestly — there are no right or wrong answers.</p>
-      </div>
-
-      <!-- Progress Bar -->
-      <div class="progress">
-        <div class="progress__info">
-          <span class="progress__text">Progress</span>
-          <span class="progress__count" id="progressCount">0 / 40</span>
+    <div class="results">
+      <div id="resultsContainer">
+        <div style="text-align:center; padding: var(--space-4xl) 0;">
+          <p style="color: var(--text-muted);">Loading your results...</p>
         </div>
-        <div class="progress__bar">
-          <div class="progress__fill" id="progressFill" style="width: 0%"></div>
-        </div>
-      </div>
-
-      <!-- Question Container (rendered by JS) -->
-      <div id="questionContainer"></div>
-
-      <!-- Navigation -->
-      <div class="quiz__nav">
-        <button class="btn btn--ghost" id="prevBtn" style="visibility: hidden;">← Previous</button>
-        <div class="quiz__nav-spacer"></div>
-        <button class="btn btn--primary" id="nextBtn" disabled>Next →</button>
       </div>
     </div>
   </main>
 
-  <!-- Sticky bottom ad -->
-  <div class="quiz-ad-sticky">
-    <div class="ad-slot ad-slot--sticky">
-      <span class="ad-slot__label">Advertisement</span>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 My Inner Window. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <script src="js/questions.js"></script>
-  <script src="js/scoring.js"></script>
-  <script src="js/quiz.js"></script>
+  <script src="js/enneagram-types.js"></script>
+  <script src="js/enneagram-results.js"></script>
+  <script src="js/email.js"></script>
   <script src="js/app.js"></script>
   <script src="js/auth.js"></script>
 
