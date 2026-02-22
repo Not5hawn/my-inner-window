@@ -139,6 +139,17 @@
   color: var(--text-muted);
 }
 
+/* ---- Test Card Highlight (on scroll-to) ---- */
+.card--highlight {
+  animation: cardPulse 0.8s ease;
+}
+
+@keyframes cardPulse {
+  0% { transform: scale(1); box-shadow: var(--shadow-card); }
+  40% { transform: scale(1.03); box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), 0 0 40px rgba(45, 212, 191, 0.15); }
+  100% { transform: scale(1); box-shadow: var(--shadow-card); }
+}
+
 /* ---- How It Works ---- */
 .how-section {
   background: var(--bg-secondary);

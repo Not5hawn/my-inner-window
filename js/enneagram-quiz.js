@@ -1,23 +1,21 @@
 /* ===========================
-   My Inner Window - Quiz Engine
+   My Inner Window - Enneagram Quiz Engine
    =========================== */
 
 (function() {
-  const STORAGE_KEY = 'miw_quiz_answers';
+  const STORAGE_KEY = 'miw_enneagram_answers';
   let currentIndex = 0;
   let answers = {};
-  let direction = 'forward'; // track animation direction
+  let direction = 'forward';
 
-  // DOM elements
   const container = document.getElementById('questionContainer');
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const progressFill = document.getElementById('progressFill');
   const progressCount = document.getElementById('progressCount');
 
-  if (!container) return; // Not on quiz page
+  if (!container) return;
 
-  // ---- Init ---- //
   function init() {
     loadAnswers();
     renderQuestion();
@@ -25,7 +23,6 @@
     nextBtn.addEventListener('click', goNext);
   }
 
-  // ---- Persistence ---- //
   function loadAnswers() {
     try {
       const saved = sessionStorage.getItem(STORAGE_KEY);
@@ -37,9 +34,8 @@
     sessionStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
   }
 
-  // ---- Render ---- //
   function renderQuestion() {
-    const q = QUESTIONS[currentIndex];
+    const q = ENNEAGRAM_QUESTIONS[currentIndex];
     const selectedValue = answers[q.id];
 
     const likertOptions = [
@@ -54,7 +50,7 @@
 
     container.innerHTML = `
       <div class="question-card ${animClass}">
-        <div class="question__number">Question ${currentIndex + 1} of ${QUESTIONS.length}</div>
+        <div class="question__number">Question ${currentIndex + 1} of ${ENNEAGRAM_QUESTIONS.length}</div>
         <p class="question__text">${q.text}</p>
         <div class="likert">
           ${likertOptions.map(opt => `
@@ -75,7 +71,6 @@
       </div>
     `;
 
-    // Attach click listeners (handles both new selections and re-clicks for back-navigation)
     container.querySelectorAll('.likert__option').forEach(option => {
       const input = option.querySelector('.likert__input');
       option.addEventListener('click', () => {
@@ -86,9 +81,8 @@
         saveAnswers();
         updateUI();
 
-        // Auto-advance after short delay
         setTimeout(() => {
-          if (currentIndex < QUESTIONS.length - 1) {
+          if (currentIndex < ENNEAGRAM_QUESTIONS.length - 1) {
             goNext();
           }
         }, alreadySelected ? 150 : 350);
@@ -98,20 +92,17 @@
     updateUI();
   }
 
-  // ---- UI Updates ---- //
   function updateUI() {
-    const q = QUESTIONS[currentIndex];
+    const q = ENNEAGRAM_QUESTIONS[currentIndex];
     const hasAnswer = answers[q.id] !== undefined;
     const isFirst = currentIndex === 0;
-    const isLast = currentIndex === QUESTIONS.length - 1;
+    const isLast = currentIndex === ENNEAGRAM_QUESTIONS.length - 1;
 
-    // Progress
     const answeredCount = Object.keys(answers).length;
-    const pct = (answeredCount / QUESTIONS.length) * 100;
+    const pct = (answeredCount / ENNEAGRAM_QUESTIONS.length) * 100;
     progressFill.style.width = pct + '%';
-    progressCount.textContent = `${answeredCount} / ${QUESTIONS.length}`;
+    progressCount.textContent = `${answeredCount} / ${ENNEAGRAM_QUESTIONS.length}`;
 
-    // Buttons
     prevBtn.style.visibility = isFirst ? 'hidden' : 'visible';
 
     if (isLast) {
@@ -124,12 +115,11 @@
     }
   }
 
-  // ---- Navigation ---- //
   function goNext() {
-    const q = QUESTIONS[currentIndex];
+    const q = ENNEAGRAM_QUESTIONS[currentIndex];
     if (answers[q.id] === undefined) return;
 
-    if (currentIndex === QUESTIONS.length - 1) {
+    if (currentIndex === ENNEAGRAM_QUESTIONS.length - 1) {
       submitQuiz();
       return;
     }
@@ -146,43 +136,36 @@
     renderQuestion();
   }
 
-  // ---- Submit ---- //
   function submitQuiz() {
-    // Verify all questions answered
-    const allAnswered = QUESTIONS.every(q => answers[q.id] !== undefined);
+    const allAnswered = ENNEAGRAM_QUESTIONS.every(q => answers[q.id] !== undefined);
     if (!allAnswered) {
-      // Find first unanswered
-      const firstUnanswered = QUESTIONS.findIndex(q => answers[q.id] === undefined);
+      const firstUnanswered = ENNEAGRAM_QUESTIONS.findIndex(q => answers[q.id] === undefined);
       currentIndex = firstUnanswered;
       renderQuestion();
       return;
     }
 
-    // Calculate result
-    const result = calculateMBTI(answers);
+    const result = calculateEnneagram(answers);
 
-    // Save to sessionStorage for results page
-    sessionStorage.setItem('miw_result', JSON.stringify(result));
+    sessionStorage.setItem('miw_enneagram_result', JSON.stringify(result));
 
-    // Also save to localStorage for persistent history
     try {
-      const history = JSON.parse(localStorage.getItem('miw_history') || '[]');
+      const history = JSON.parse(localStorage.getItem('miw_enneagram_history') || '[]');
       history.push({
-        type: result.type,
+        label: result.label,
+        dominantType: result.dominantType,
+        wing: result.wing,
         date: new Date().toISOString(),
-        dichotomies: result.dichotomies
+        typeScores: result.typeScores
       });
-      localStorage.setItem('miw_history', JSON.stringify(history));
+      localStorage.setItem('miw_enneagram_history', JSON.stringify(history));
     } catch(e) { /* ignore */ }
 
-    // Clear quiz progress
     sessionStorage.removeItem(STORAGE_KEY);
 
-    // Navigate to results
-    window.location.href = `results.html?type=${result.type}`;
+    window.location.href = `enneagram-results.html?type=${result.label}`;
   }
 
-  // ---- Keyboard navigation ---- //
   document.addEventListener('keydown', (e) => {
     if (!container) return;
     if (e.key === 'ArrowRight' || e.key === 'Enter') {
@@ -190,7 +173,7 @@
     } else if (e.key === 'ArrowLeft') {
       goPrev();
     } else if (e.key >= '1' && e.key <= '5') {
-      const q = QUESTIONS[currentIndex];
+      const q = ENNEAGRAM_QUESTIONS[currentIndex];
       const input = document.getElementById(`q${q.id}_${e.key}`);
       if (input) {
         input.checked = true;

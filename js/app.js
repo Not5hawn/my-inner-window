@@ -80,10 +80,23 @@ function initNav() {
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const href = anchor.getAttribute('href');
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Highlight test cards when scrolling to #tests
+        if (href === '#tests') {
+          setTimeout(() => {
+            target.querySelectorAll('.test-card').forEach((card, i) => {
+              setTimeout(() => {
+                card.classList.add('card--highlight');
+                setTimeout(() => card.classList.remove('card--highlight'), 800);
+              }, i * 150);
+            });
+          }, 500);
+        }
       }
     });
   });
