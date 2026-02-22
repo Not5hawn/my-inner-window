@@ -84,9 +84,9 @@
     </div>
   `;
 
-  // Split dimensions: first 3 free, last 2 behind paywall
-  const freeDimensions = dimensions.slice(0, 3);
-  const premiumDimensions = dimensions.slice(3);
+  // Split dimensions: first 1 free (Openness), remaining 4 behind paywall
+  const freeDimensions = dimensions.slice(0, 1);
+  const premiumDimensions = dimensions.slice(1);
 
   // Build free interpretive text (first 3 dimensions with full summaries + all traits)
   let interpretiveHTML = freeDimensions.map(dim => {
