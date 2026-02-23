@@ -64,6 +64,13 @@
   const wingData = ENNEAGRAM_TYPES[wing];
   const isPremium = localStorage.getItem('miw_premium') === 'true';
 
+  // Save to profile if logged in (deferred so auth.js is loaded first)
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof saveResult === 'function') {
+      saveResult({ test: 'enneagram', label: typeLabel, name: typeData.name, emoji: typeData.emoji, url: 'enneagram-results.html?type=' + typeLabel });
+    }
+  });
+
   // Update page title
   document.title = `You are Type ${typeLabel} — ${typeData.name} | My Inner Window`;
 

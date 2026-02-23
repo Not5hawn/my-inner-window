@@ -43,6 +43,13 @@
   const typeData = MBTI_TYPES[typeCode];
   const isPremium = localStorage.getItem('miw_premium') === 'true';
 
+  // Save to profile if logged in (deferred so auth.js is loaded first)
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof saveResult === 'function') {
+      saveResult({ test: 'mbti', label: typeCode, name: typeData.name, emoji: typeData.emoji, url: 'results.html?type=' + typeCode });
+    }
+  });
+
   // Update page title
   document.title = `You are ${typeCode} — ${typeData.name} | My Inner Window`;
 

@@ -101,6 +101,23 @@ function logoutUser() {
   clearCurrentUser();
 }
 
+/* ---- Results Persistence ---- */
+function saveResult(resultData) {
+  const email = localStorage.getItem(AUTH_CURRENT_KEY);
+  if (!email) return;
+  const users = getUsers();
+  const idx = users.findIndex(u => u.email === email);
+  if (idx === -1) return;
+  if (!users[idx].results) users[idx].results = {};
+  users[idx].results[resultData.test] = { ...resultData, date: new Date().toISOString() };
+  saveUsers(users);
+}
+
+function getUserResults() {
+  const user = getCurrentUser();
+  return user ? (user.results || {}) : {};
+}
+
 /* ---- UI: Update Nav Auth State ---- */
 function updateAuthUI() {
   const container = document.getElementById('authButtons');
@@ -119,12 +136,23 @@ function updateAuthUI() {
       updateAuthUI();
       showToast('You have been logged out.');
     });
+    // Inject My Results link before theme toggle if not already present
+    if (!document.getElementById('myResultsLink')) {
+      const link = document.createElement('a');
+      link.href = 'my-results.html';
+      link.className = 'nav__link';
+      link.id = 'myResultsLink';
+      link.textContent = 'My Results';
+      const themeToggle = document.querySelector('.theme-toggle');
+      if (themeToggle) themeToggle.parentNode.insertBefore(link, themeToggle);
+    }
   } else {
     container.innerHTML = `
       <button class="btn btn--signup" id="signupBtn">Sign Up</button>
       <button class="btn btn--login" id="loginBtn">Log In</button>`;
     document.getElementById('loginBtn').addEventListener('click', () => openAuthModal('login'));
     document.getElementById('signupBtn').addEventListener('click', () => openAuthModal('register'));
+    document.getElementById('myResultsLink')?.remove();
   }
 }
 

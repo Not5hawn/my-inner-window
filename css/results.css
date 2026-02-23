@@ -657,6 +657,101 @@
   display: none;
 }
 
+/* ---- My Results History Cards ---- */
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+.history-card {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.history-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-teal);
+}
+
+.history-card__badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  align-self: flex-start;
+}
+
+.history-card__badge--mbti {
+  background: rgba(168,85,247,0.12);
+  color: var(--accent-purple);
+  border: 1px solid rgba(168,85,247,0.3);
+}
+
+.history-card__badge--enneagram {
+  background: rgba(45,212,191,0.1);
+  color: var(--accent-teal);
+  border: 1px solid rgba(45,212,191,0.3);
+}
+
+.history-card__badge--bigfive {
+  background: rgba(96,165,250,0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(96,165,250,0.3);
+}
+
+.history-card__type {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.history-card__emoji { font-size: 2rem; }
+
+.history-card__label {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.history-card__name {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.history-card__date {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.history-card__empty {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.history-card__actions {
+  margin-top: auto;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
   .type-header__code {

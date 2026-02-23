@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5RZ4FEE1EX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5RZ4FEE1EX');
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5455988412575697" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Results — My Inner Window</title>
+  <meta name="description" content="View your saved personality test results — MBTI, Enneagram, and Big Five — all in one place.">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪟</text></svg>">
+
+  <!-- Apply theme before render to prevent flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('miw_theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/results.css">
+  <link rel="stylesheet" href="css/auth.css">
+
+  <style>
+    .my-results {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--space-4xl) var(--space-lg);
+    }
+
+    .my-results__header {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .my-results__header h1 {
+      margin-bottom: var(--space-sm);
+    }
+
+    .my-results__header p {
+      color: var(--text-muted);
+      font-size: var(--fs-md);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">
+        ✦ <span>My Inner Window</span>
+      </a>
+      <div class="nav__hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <div class="nav__dropdown">
+          <span class="nav__link nav__dropdown-trigger">Take a Test <span class="nav__caret">▾</span></span>
+          <div class="nav__dropdown-menu">
+            <a href="test.html" class="nav__dropdown-item">MBTI</a>
+            <a href="enneagram.html" class="nav__dropdown-item">Enneagram</a>
+            <a href="bigfive.html" class="nav__dropdown-item">Big Five (OCEAN)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav__link">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-toggle__icon" id="themeIcon">&#x1F319;</span>
+        </button>
+        <div class="auth-buttons" id="authButtons"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="my-results">
+      <div class="my-results__header">
+        <h1>My <span class="text-gradient">Results</span></h1>
+        <p>Your most recent result for each personality test.</p>
+      </div>
+      <div id="myResultsContainer"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <h3>✦ My Inner Window</h3>
+          <p>Free personality tests backed by psychology. Discover who you really are.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <h4>Tests</h4>
+            <a href="test.html">MBTI Test</a>
+            <a href="enneagram.html">Enneagram</a>
+            <a href="bigfive.html">Big Five (OCEAN)</a>
+          </div>
+          <div class="footer__column">
+            <h4>Company</h4>
+            <a href="about.html">About</a>
+            <a href="mailto:hello@myinnerwindow.com">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">&copy; 2026 My Inner Window. All rights reserved.</span>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/my-results.js"></script>
+
+  <!-- Auth Modal -->
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-modal">
+      <button class="auth-modal__close" id="authModalClose">&times;</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Log In</button>
+        <button class="auth-tab" data-tab="register">Sign Up</button>
+      </div>
+      <form class="auth-form active" id="loginForm">
+        <h2 class="auth-form__title">Welcome Back</h2>
+        <p class="auth-form__subtitle">Log in to your account</p>
+        <div class="auth-form__error"></div>
+        <div class="auth-field">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit">Log In</button>
+        <p class="auth-switch">Don't have an account? <a data-auth-switch="register">Sign up</a></p>
+      </form>
+      <form class="auth-form" id="registerForm">
+        <h2 class="auth-form__title">Create Account</h2>
+        <p class="auth-form__subtitle">Join My Inner Window</p>
+        <div class="auth-form__error"></div>
+        <div class="auth-field">
+          <label for="regName">Name</label>
+          <input type="text" id="regName" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="auth-field">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="you@example.com" autocomplete="email">
+        </div>
+        <div class="auth-field">
+          <label for="regPassword">Password</label>
+          <input type="password" id="regPassword" placeholder="Create a password" autocomplete="new-password">
+          <ul class="pw-requirements">
+            <li id="req-length"><span class="pw-icon"></span> 8+ characters</li>
+            <li id="req-uppercase"><span class="pw-icon"></span> Uppercase</li>
+            <li id="req-lowercase"><span class="pw-icon"></span> Lowercase</li>
+            <li id="req-number"><span class="pw-icon"></span> Number</li>
+            <li id="req-special"><span class="pw-icon"></span> Special char</li>
+          </ul>
+        </div>
+        <div class="auth-field">
+          <label for="regConfirm">Confirm Password</label>
+          <input type="password" id="regConfirm" placeholder="Confirm your password" autocomplete="new-password">
+        </div>
+        <button type="submit" class="btn btn--primary btn--submit">Create Account</button>
+        <p class="auth-switch">Already have an account? <a data-auth-switch="login">Log in</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

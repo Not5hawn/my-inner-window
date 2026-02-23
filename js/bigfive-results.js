@@ -43,6 +43,13 @@
   document.title = 'Your Big Five Profile | My Inner Window';
   const isPremium = localStorage.getItem('miw_premium') === 'true';
 
+  // Save to profile if logged in (deferred so auth.js is loaded first)
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof saveResult === 'function') {
+      saveResult({ test: 'bigfive', label: profileCode, name: 'Your Profile', emoji: '📊', url: 'bigfive-results.html?profile=' + profileCode });
+    }
+  });
+
   const MEASURES = {
     O: 'Curiosity & Creativity',
     C: 'Organization & Discipline',
