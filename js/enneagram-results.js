@@ -235,6 +235,17 @@
       </div>
     </div>
 
+    <!-- Email Results -->
+    <div class="email-results-section">
+      <h3>📧 Email My Results</h3>
+      <p>Send a copy of your results to your inbox.</p>
+      <form class="input-group" id="emailResultsForm">
+        <input type="email" class="input" placeholder="your@email.com" required id="emailResultsInput">
+        <button type="submit" class="btn btn--primary">Send</button>
+      </form>
+      <p class="email-results__feedback" id="emailResultsFeedback"></p>
+    </div>
+
     <!-- Email Capture -->
     <div class="email-capture" id="emailCapture">
       <h3>Get More Personality Insights</h3>
@@ -256,6 +267,19 @@
       <span class="ad-slot__label">Advertisement</span>
     </div>
   `;
+
+  // Wire up email results form
+  if (typeof initEmailResultsForm === 'function') {
+    initEmailResultsForm({
+      testName:   'Enneagram',
+      typeLabel:  typeLabel,
+      typeName:   typeData.name,
+      typeEmoji:  typeData.emoji,
+      tagline:    typeData.tagline,
+      overview:   typeData.free.overview,
+      resultsUrl: getShareURL(),
+    });
+  }
 
   // Unlock premium content if already purchased
   if (isPremium) {

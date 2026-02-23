@@ -193,6 +193,17 @@
       </div>
     </div>
 
+    <!-- Email Results -->
+    <div class="email-results-section">
+      <h3>📧 Email My Results</h3>
+      <p>Send a copy of your results to your inbox.</p>
+      <form class="input-group" id="emailResultsForm">
+        <input type="email" class="input" placeholder="your@email.com" required id="emailResultsInput">
+        <button type="submit" class="btn btn--primary">Send</button>
+      </form>
+      <p class="email-results__feedback" id="emailResultsFeedback"></p>
+    </div>
+
     <!-- Email Capture -->
     <div class="email-capture" id="emailCapture">
       <h3>Get More Personality Insights</h3>
@@ -214,6 +225,22 @@
       <span class="ad-slot__label">Advertisement</span>
     </div>
   `;
+
+  // Wire up email results form
+  if (typeof initEmailResultsForm === 'function') {
+    const emailOverview = dimensions.map(d =>
+      `${BIGFIVE_PROFILES[d.key].label}: ${LEVEL_LABELS[d.level]} (${d.percentage}/100)`
+    ).join('\n');
+    initEmailResultsForm({
+      testName:   'Big Five (OCEAN)',
+      typeLabel:  profileCode,
+      typeName:   'Your Personality Profile',
+      typeEmoji:  '📊',
+      tagline:    'See where you fall on five scientifically validated dimensions of personality.',
+      overview:   emailOverview,
+      resultsUrl: getShareURL(),
+    });
+  }
 
   // Unlock premium content if already purchased
   if (isPremium) {
