@@ -114,7 +114,10 @@
         </div>
         <div class="auth-field">
           <label for="loginPassword">Password</label>
-          <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+          <div class="pw-field-wrap">
+            <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+            <button type="button" class="pw-toggle" aria-label="Show password" data-target="loginPassword"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
         </div>
         <button type="submit" class="btn btn--primary btn--submit">Log In</button>
         <p class="auth-switch">Don't have an account? <a data-auth-switch="register">Sign up</a></p>
@@ -133,7 +136,10 @@
         </div>
         <div class="auth-field">
           <label for="regPassword">Password</label>
-          <input type="password" id="regPassword" placeholder="Create a password" autocomplete="new-password">
+          <div class="pw-field-wrap">
+            <input type="password" id="regPassword" placeholder="Create a password" autocomplete="new-password">
+            <button type="button" class="pw-toggle" aria-label="Show password" data-target="regPassword"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
           <ul class="pw-requirements">
             <li id="req-length"><span class="pw-icon"></span> 8+ characters</li>
             <li id="req-uppercase"><span class="pw-icon"></span> Uppercase</li>
@@ -144,7 +150,10 @@
         </div>
         <div class="auth-field">
           <label for="regConfirm">Confirm Password</label>
-          <input type="password" id="regConfirm" placeholder="Confirm your password" autocomplete="new-password">
+          <div class="pw-field-wrap">
+            <input type="password" id="regConfirm" placeholder="Confirm your password" autocomplete="new-password">
+            <button type="button" class="pw-toggle" aria-label="Show password" data-target="regConfirm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+          </div>
         </div>
         <button type="submit" class="btn btn--primary btn--submit">Create Account</button>
         <p class="auth-switch">Already have an account? <a data-auth-switch="login">Log in</a></p>
