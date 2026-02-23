@@ -41,6 +41,7 @@
 
   const profileCode = result ? result.profileCode : profileFromURL;
   document.title = 'Your Big Five Profile | My Inner Window';
+  const isPremium = localStorage.getItem('miw_premium') === 'true';
 
   const MEASURES = {
     O: 'Curiosity & Creativity',
@@ -169,7 +170,7 @@
           <li>Personalized growth strategies per dimension</li>
           <li>Complete trait analysis</li>
         </ul>
-        <button class="btn btn--premium btn--lg" onclick="alert('Payment integration coming soon! Thank you for your interest.')">
+        <button class="btn btn--premium btn--lg" onclick="goToPremium()">
           Unlock Full Report — $1.99
         </button>
       </div>
@@ -206,6 +207,18 @@
       <span class="ad-slot__label">Advertisement</span>
     </div>
   `;
+
+  // Unlock premium content if already purchased
+  if (isPremium) {
+    const premiumSection = container.querySelector('.premium-section');
+    if (premiumSection) premiumSection.classList.add('premium-unlocked');
+  }
+
+  // Redirect to Lemon Squeezy checkout
+  window.goToPremium = function() {
+    sessionStorage.setItem('miw_unlock_return', window.location.href);
+    window.location.href = 'https://myinnerwindow.lemonsqueezy.com/checkout/buy/3d517452-fd04-4bb6-82e1-7f969d139043';
+  };
 
   // Animate all spectrum bars after render
   setTimeout(() => {

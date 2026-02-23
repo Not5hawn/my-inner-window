@@ -643,6 +643,20 @@
   font-style: italic;
 }
 
+/* ---- Premium Unlocked State ---- */
+.premium-unlocked .premium-teaser__fade {
+  max-height: none;
+  overflow: visible;
+  user-select: auto;
+  pointer-events: auto;
+}
+.premium-unlocked .premium-teaser__fade::after {
+  display: none;
+}
+.premium-unlocked .premium-overlay {
+  display: none;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
   .type-header__code {

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlocking Your Report — My Inner Window</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪟</text></svg>">
+  <script>
+    (function() {
+      var t = localStorage.getItem('miw_theme') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    .unlock-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      text-align: center;
+      padding: 2rem;
+      gap: 1rem;
+    }
+    .unlock-screen__icon { font-size: 3rem; }
+    .unlock-screen__title { font-size: 1.5rem; font-weight: 700; }
+    .unlock-screen__text { color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="unlock-screen">
+    <div class="unlock-screen__icon">🔓</div>
+    <div class="unlock-screen__title">Unlocking your report...</div>
+    <div class="unlock-screen__text">Taking you back to your results.</div>
+  </div>
+
+  <script>
+    localStorage.setItem('miw_premium', 'true');
+    var returnURL = sessionStorage.getItem('miw_unlock_return') || 'index.html';
+    sessionStorage.removeItem('miw_unlock_return');
+    window.location.replace(returnURL);
+  </script>
+</body>
+</html>

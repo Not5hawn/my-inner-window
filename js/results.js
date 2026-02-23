@@ -41,6 +41,7 @@
   }
 
   const typeData = MBTI_TYPES[typeCode];
+  const isPremium = localStorage.getItem('miw_premium') === 'true';
 
   // Update page title
   document.title = `You are ${typeCode} — ${typeData.name} | My Inner Window`;
@@ -188,7 +189,7 @@
           <li>In-depth relationship & love guide</li>
           <li>Personalized growth roadmap</li>
         </ul>
-        <button class="btn btn--premium btn--lg" onclick="alert('Payment integration coming soon! Thank you for your interest.')">
+        <button class="btn btn--premium btn--lg" onclick="goToPremium()">
           Unlock Full Report — $1.99
         </button>
       </div>
@@ -231,6 +232,18 @@
       <span class="ad-slot__label">Advertisement</span>
     </div>
   `;
+
+  // Unlock premium content if already purchased
+  if (isPremium) {
+    const premiumSection = container.querySelector('.premium-section');
+    if (premiumSection) premiumSection.classList.add('premium-unlocked');
+  }
+
+  // Redirect to Lemon Squeezy checkout
+  window.goToPremium = function() {
+    sessionStorage.setItem('miw_unlock_return', window.location.href);
+    window.location.href = 'https://myinnerwindow.lemonsqueezy.com/checkout/buy/3d517452-fd04-4bb6-82e1-7f969d139043';
+  };
 
   // Animate dichotomy bars after render
   setTimeout(() => {
