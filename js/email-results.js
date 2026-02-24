@@ -33,7 +33,7 @@
           EMAILJS_SERVICE,
           EMAILJS_TEMPLATE,
           {
-            to_email:    to,
+            email:       to,
             test_name:   data.testName,
             type_label:  data.typeLabel,
             type_name:   data.typeName,
