@@ -7,19 +7,18 @@
   const EMAILJS_TEMPLATE   = 'template_z02jlu2';
   const EMAILJS_PUBLIC_KEY = 'PTctCDHcfBnajONzw';
 
-  if (typeof emailjs !== 'undefined') {
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-  }
-
   window.initEmailResultsForm = function (data) {
     const form     = document.getElementById('emailResultsForm');
-    const input    = document.getElementById('emailResultsInput');
     const feedback = document.getElementById('emailResultsFeedback');
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const to = input.value.trim();
+
+      // Re-query input on each submit to avoid stale reference
+      const input = document.getElementById('emailResultsInput');
+      const to    = input ? input.value.trim() : '';
+      console.log('[EmailResults] to:', to);
       if (!to) return;
 
       const btn = form.querySelector('button[type=submit]');
@@ -29,21 +28,27 @@
       feedback.className   = 'email-results__feedback';
 
       try {
-        await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, {
-          to_email:   to,
-          test_name:  data.testName,
-          type_label: data.typeLabel,
-          type_name:  data.typeName,
-          type_emoji: data.typeEmoji,
-          tagline:    data.tagline,
-          overview:   data.overview,
-          results_url: data.resultsUrl,
-        });
+        // Pass publicKey inline — more reliable than emailjs.init()
+        await emailjs.send(
+          EMAILJS_SERVICE,
+          EMAILJS_TEMPLATE,
+          {
+            to_email:    to,
+            test_name:   data.testName,
+            type_label:  data.typeLabel,
+            type_name:   data.typeName,
+            type_emoji:  data.typeEmoji,
+            tagline:     data.tagline,
+            overview:    data.overview,
+            results_url: data.resultsUrl,
+          },
+          { publicKey: EMAILJS_PUBLIC_KEY }
+        );
         feedback.textContent = '✓ Sent! Check your inbox.';
         feedback.classList.add('email-results__feedback--success');
-        input.value = '';
+        if (input) input.value = '';
       } catch (err) {
-        console.error('EmailJS error:', err.status, err.text);
+        console.error('[EmailResults] Error:', err.status, err.text);
         feedback.textContent = 'Failed to send. Please try again.';
         feedback.classList.add('email-results__feedback--error');
       } finally {
