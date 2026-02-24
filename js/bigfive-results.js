@@ -134,12 +134,8 @@
     `;
   }
 
-  // First dimension free, rest paywalled
-  const freeDimensions = dimensions.slice(0, 1);
-  const premiumDimensions = dimensions.slice(1);
-
-  const freeCardsHTML = freeDimensions.map(dim => buildDimensionCard(dim, false)).join('');
-  const premiumCardsHTML = premiumDimensions.map(dim => buildDimensionCard(dim, true)).join('');
+  // All dimension detail cards are paywalled
+  const premiumCardsHTML = dimensions.map(dim => buildDimensionCard(dim, true)).join('');
 
   container.innerHTML = `
     <!-- Profile Header -->
@@ -153,14 +149,11 @@
     <!-- OCEAN Overview -->
     ${oceanOverviewHTML}
 
-    <!-- Free dimension detail -->
-    <h2 class="ocean-section-title">Dimension <span class="text-gradient">Breakdown</span></h2>
-    ${freeCardsHTML}
-
     <!-- Premium Teaser + Paywall -->
     <div class="premium-section">
       <div class="premium-teaser">
         <div class="premium-teaser__fade">
+          <h2 class="ocean-section-title">Dimension <span class="text-gradient">Breakdown</span></h2>
           ${premiumCardsHTML}
         </div>
       </div>
