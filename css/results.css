@@ -181,7 +181,7 @@
 /* Faded deeper content that bleeds into the paywall */
 .premium-teaser__fade {
   position: relative;
-  max-height: 250px;
+  max-height: 370px;
   overflow: hidden;
   user-select: none;
   pointer-events: none;
@@ -812,7 +812,7 @@
   }
 
   .premium-teaser__fade {
-    max-height: 180px;
+    max-height: 300px;
   }
 
   .share-buttons {
