@@ -43,7 +43,7 @@
         feedback.classList.add('email-results__feedback--success');
         input.value = '';
       } catch (err) {
-        console.error('EmailJS error:', err);
+        console.error('EmailJS error:', err.status, err.text);
         feedback.textContent = 'Failed to send. Please try again.';
         feedback.classList.add('email-results__feedback--error');
       } finally {
