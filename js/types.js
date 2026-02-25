@@ -10,24 +10,22 @@ const MBTI_TYPES = {
     tagline: "Imaginative and strategic thinkers, with a plan for everything.",
     free: {
       overview: "INTJs are independent, analytical thinkers who approach life with a strategic mindset. They are driven by their inner vision and are constantly seeking to improve systems and ideas. Known for their intellectual curiosity and determination, INTJs are often seen as the masterminds behind complex plans and innovations.",
-      strengths: [
-        "Strategic and long-term thinking",
-        "Highly independent and self-motivated",
-        "Excellent problem-solving abilities",
-        "Strong commitment to goals",
-        "Open to new ideas backed by logic"
-      ],
-      weaknesses: [
-        "Can appear arrogant or dismissive",
-        "Difficulty expressing emotions",
-        "Overly critical of inefficiency",
-        "May struggle with social niceties",
-        "Perfectionist tendencies"
-      ]
+      strengths: ["Strategic and long-term thinking", "Highly independent and self-motivated", "Excellent problem-solving abilities", "Strong commitment to goals", "Open to new ideas backed by logic"],
+      weaknesses: ["Can appear arrogant or dismissive", "Difficulty expressing emotions", "Overly critical of inefficiency", "May struggle with social niceties", "Perfectionist tendencies"]
     },
     premium: {
-      careers: ["Data Scientist", "Software Architect", "Investment Banker", "Surgeon", "University Professor", "Management Consultant", "Judge", "Aerospace Engineer"],
-      relationships: "INTJs approach relationships with the same strategic mindset they apply to everything else. They value intellectual compatibility above all and need a partner who can match their depth of thought. While not naturally expressive, they show love through dedication, problem-solving, and long-term commitment to the relationship's growth.",
+      workAptitude: "You are built for environments that value long-term vision, intellectual rigor, and the freedom to execute on your own terms. You excel when given a complex challenge, real authority over your approach, and room to design solutions that will still hold up years from now. Highly political or bureaucratic workplaces — where progress requires navigating interpersonal dynamics more than producing results — will frustrate and drain you. Your most powerful professional move is finding or creating roles where the quality of your thinking is the primary currency, because that is where you are genuinely unmatched.",
+      careers: [
+        { title: "Data Scientist", reason: "INTJs' dominant Introverted Intuition constantly seeks hidden patterns in complex information, making the extraction of signal from noise feel like a natural calling. Their Te-driven desire to build reliable, optimized systems means they are drawn to turning raw data into actionable insight." },
+        { title: "Software Architect", reason: "Designing the overarching logic of a system — rather than just writing code — perfectly satisfies the INTJ's need to work at the level of frameworks and long-range structure. Their comfort with abstraction and intolerance for poorly designed systems gives them the patience to get the architecture exactly right." },
+        { title: "Investment Banker", reason: "The high-stakes, long-horizon nature of investment strategy aligns with the INTJ's strength in forecasting consequences many steps ahead. They thrive on translating complex financial models into decisive recommendations, a setting where sharp analysis and confidence carry the day." },
+        { title: "Surgeon", reason: "Surgery demands both meticulous precision and the ability to execute a plan under pressure, two areas where INTJs naturally excel. Their low emotional reactivity in crisis situations and high standards for mastery make the operating room a place where their temperament is an asset, not a liability." },
+        { title: "University Professor", reason: "Academic life gives INTJs the freedom to pursue their ideas to whatever depth they demand, without being forced to simplify for a commercial audience. Teaching also satisfies their drive to construct elegant conceptual frameworks that others can use as scaffolding for their own thinking." },
+        { title: "Management Consultant", reason: "Consulting lets INTJs parachute into broken systems, diagnose the root cause, and prescribe a solution before moving on to the next intellectual challenge. Their ability to hold an entire organization's logic in mind and identify the single highest-leverage intervention is exactly what clients pay for." },
+        { title: "Judge", reason: "The judicial role rewards the INTJ's commitment to principled, logic-based reasoning over emotional or social pressure, and their natural authority means they are comfortable delivering difficult verdicts. Their long-term thinking also suits the work of crafting precedents whose implications ripple forward across many future cases." },
+        { title: "Aerospace Engineer", reason: "Aerospace projects unfold over years and demand both visionary system-level thinking and uncompromising precision in execution — a combination that maps directly onto the INTJ's cognitive profile. The field's unforgiving consequences for sloppy thinking satisfy their need for a domain where rigor genuinely matters." }
+      ],
+      relationships: "INTJs approach relationships with the same strategic mindset they apply to everything else, entering them deliberately and only when they see genuine long-term potential. Their dominant Introverted Intuition means they are constantly building a rich internal model of their partner — cataloguing patterns, predicting needs, and working toward a shared vision of what the relationship could become. Because their Extraverted Feeling is the least developed function in their stack, emotional expression does not come naturally; love is more likely to appear as a meticulously researched birthday gift or a quietly executed plan to remove a burden from their partner's life. They need intellectual compatibility above all else, because for an INTJ, a relationship without the spark of ideas feels hollow no matter how comfortable it is. Partners who understand that an INTJ's self-disclosure is rare and therefore precious, and who meet them in the world of ideas as well as emotions, will find one of the most loyal and devoted companions of any type.",
       growth: "INTJs grow by developing their emotional intelligence and learning to value the human element in their plans. Practicing vulnerability with trusted people and recognizing that not everything needs to be optimized can lead to deeper, more fulfilling connections.",
       compatibility: ["ENFP", "ENTP", "INFJ", "ENTJ"]
     }
@@ -36,435 +34,405 @@ const MBTI_TYPES = {
   INTP: {
     name: "The Logician",
     emoji: "🔬",
-    tagline: "Innovative inventors with an unquenchable thirst for knowledge.",
+    tagline: "Innovative inventors with an unquenchable thirst for knowledge and a mind that never stops questioning.",
     free: {
-      overview: "INTPs are philosophical innovators fascinated by logical analysis, systems, and design. They are absorbed in thought and enjoy exploring concepts and finding underlying patterns. INTPs value intellect over sentiment and can seem lost in their own world of ideas.",
-      strengths: [
-        "Exceptional analytical thinking",
-        "Creative problem-solving",
-        "Open-minded and flexible",
-        "Objective and logical",
-        "Passionate about areas of interest"
-      ],
-      weaknesses: [
-        "Socially withdrawn or absent-minded",
-        "Difficulty with follow-through",
-        "Insensitive to emotional needs",
-        "Overthinking and analysis paralysis",
-        "Dislike of routine and rules"
-      ]
+      overview: "INTPs are analytical, precise thinkers who approach the world through the lens of logical systems. They are driven by a need to understand how things work at the most fundamental level — constantly questioning assumptions and seeking the most accurate mental model possible. Independent and intellectually insatiable, INTPs are often found at the frontier of ideas, where conventional wisdom ends and unexplored territory begins. Their minds are always running, even when they appear quiet.",
+      strengths: ["Exceptional analytical and logical reasoning ability", "Deeply creative and original theoretical thinker", "Highly objective and impartial in evaluating ideas", "Open-minded toward any idea that holds up to scrutiny", "Able to see connections between seemingly unrelated fields"],
+      weaknesses: ["Can appear detached or indifferent to others' feelings", "Tendency to overthink and get lost in hypotheticals", "Struggles with follow-through and real-world execution", "May come across as condescending or dismissive without realizing it", "Dislikes routine and may resist necessary structure"]
     },
     premium: {
-      careers: ["Theoretical Physicist", "Software Developer", "Philosopher", "Data Analyst", "Mathematician", "Game Designer", "Research Scientist", "Technical Writer"],
-      relationships: "INTPs need intellectual stimulation in relationships and value a partner who respects their need for independence. They express love through sharing ideas and helping solve problems rather than through emotional displays. They need patience from partners as they learn to navigate emotional waters.",
-      growth: "INTPs benefit from setting deadlines for themselves and practicing completion of projects. Developing emotional vocabulary and checking in with loved ones' feelings helps them build stronger, more balanced relationships.",
-      compatibility: ["ENTJ", "ENFJ", "INFJ", "ESTJ"]
+      workAptitude: "You thrive in environments that offer intellectual depth, analytical freedom, and the space to explore problems without being rushed toward premature conclusions. Research, engineering, philosophy, and systems design all reward the kind of first-principles thinking you do naturally. Routine tasks, rigid processes, and roles where output is valued over insight tend to leave you disengaged. Your ideal environment treats your mind as the asset it is — giving you interesting problems, minimal bureaucracy, and colleagues who can keep up with you intellectually.",
+      careers: [
+        { title: "Theoretical Physicist", reason: "INTPs' dominant Introverted Thinking drives a relentless need to construct the most logically perfect model of reality possible. Physics at the theoretical level — where the goal is to find the single elegant equation that explains everything — is the ultimate expression of this drive." },
+        { title: "Software Engineer", reason: "Coding rewards Ti precision and Ne ingenuity in equal measure: the logic must be airtight, and the architecture must be clever. INTPs who find the right codebase feel the same satisfaction a mathematician feels solving a proof." },
+        { title: "Research Scientist", reason: "The academic research environment gives INTPs the freedom to pursue a question to whatever depth it demands, insulated from commercial timelines. The peer review process, which rewards rigor over personality, suits their preference for ideas over politics." },
+        { title: "Philosopher", reason: "Pure philosophical inquiry is Ti and Ne operating without guardrails. INTPs who find this field rarely leave it, because it is one of the few professions where questioning absolutely everything is not only permitted but required." },
+        { title: "Economist", reason: "Modeling complex systems with multiple interacting variables — and finding the hidden mechanism that explains an observed pattern — maps directly onto the INTP's cognitive strengths. Economic theory at the research level is applied puzzle-solving at scale." },
+        { title: "Game Designer", reason: "Building internally consistent rule systems that generate emergent complexity and unpredictable player behavior satisfies both Ti's love of elegant logical architecture and Ne's delight in the unexpected outcomes that arise from good systems." },
+        { title: "Forensic Analyst", reason: "Ti-driven deductive reasoning applied to physical evidence: every conclusion must be logically necessitated by the facts, with no room for emotional interpretation. INTPs often find detective-style work deeply satisfying for exactly this reason." },
+        { title: "Systems Architect", reason: "Whether the system is software, organizational, or mechanical, INTPs who work at the level of system design — rather than day-to-day maintenance — find the right balance of abstraction and real-world consequence that keeps them engaged long-term." }
+      ],
+      relationships: "INTPs approach relationships with genuine curiosity about their partner as a fascinating system to understand — what makes them tick, what their internal logic is, how they see the world differently. Their inferior Extraverted Feeling means emotional expression is genuinely the last thing they develop, and love tends to manifest as intellectual engagement, patient teaching, and the high compliment of taking a partner's ideas completely seriously. They need a partner who values autonomy and who finds the INTP's mind as attractive as their heart. They can go long stretches without needing the kind of verbal reassurance most partners expect, and may not immediately realize that their partner does not share this low-maintenance emotional style. When an INTP commits, they are quietly devoted — not in the way that fills a room, but in the way that is still there after everyone else has gone home.",
+      growth: "INTPs grow by learning to engage with the emotional world as something worth understanding rather than something to be bypassed. Practicing the expression of feelings — even imperfectly — and showing up for the emotional needs of the people they love will unlock a depth of connection that no amount of intellectual brilliance can substitute for. Shipping imperfect work, finishing things, and tolerating the messiness of human relationships are the edges of growth most worth developing.",
+      compatibility: ["ENTJ", "ESTJ", "INFJ", "ENFJ"]
     }
   },
 
   ENTJ: {
     name: "The Commander",
     emoji: "👑",
-    tagline: "Bold, imaginative, and strong-willed leaders who always find a way.",
+    tagline: "Bold, imaginative and strong-willed leaders who always find a way — or make one.",
     free: {
-      overview: "ENTJs are natural-born leaders who embody confidence and authority. They have a gift for organizing people and resources to achieve ambitious goals. Driven by a desire for efficiency and results, ENTJs thrive in environments where they can take charge and implement their vision.",
-      strengths: [
-        "Natural leadership abilities",
-        "Strategic and efficient thinking",
-        "Confident and decisive",
-        "Strong communication skills",
-        "Driven to achieve ambitious goals"
-      ],
-      weaknesses: [
-        "Can be domineering and stubborn",
-        "Impatient with inefficiency",
-        "May overlook people's feelings",
-        "Difficulty admitting mistakes",
-        "Workaholic tendencies"
-      ]
+      overview: "ENTJs are bold, decisive leaders who combine long-range strategic vision with an unrelenting drive to execute. They see inefficiency as an affront and opportunity as something to be seized, not waited for. Among the most naturally commanding of all personality types, ENTJs are drawn to leadership not for its trappings but because they genuinely believe — and are usually right — that they can move things forward more effectively than anyone else in the room. They set high standards for themselves and expect no less from the people around them.",
+      strengths: ["Exceptional strategic thinking and long-range planning ability", "Natural commanding leadership presence that inspires action", "Decisive and composed under pressure when stakes are highest", "High standards that consistently drive excellence in themselves and others", "Ability to hold the big picture and the execution path simultaneously"],
+      weaknesses: ["Can come across as domineering or dismissive of others' input", "Low tolerance for inefficiency or perceived incompetence", "Tendency to prioritize outcomes over people's emotional experience", "May struggle to show vulnerability or admit uncertainty", "Risk of becoming a workaholic who neglects personal relationships"]
     },
     premium: {
-      careers: ["CEO / Executive", "Entrepreneur", "Corporate Lawyer", "Political Strategist", "Business Consultant", "Military Officer", "Venture Capitalist", "University Dean"],
-      relationships: "ENTJs bring the same passion and drive to relationships that they bring to their careers. They are loyal and committed partners who want to build something meaningful together. They express love through actions, planning a shared future, and helping their partner achieve their goals.",
-      growth: "ENTJs grow by slowing down to listen and valuing the process as much as the outcome. Learning that vulnerability is a form of strength and that some situations call for patience rather than action leads to more balanced leadership.",
-      compatibility: ["INTP", "INFP", "ISTP", "ENTP"]
+      workAptitude: "You are a natural executive who performs best in high-stakes, results-driven environments where your decisiveness, strategic vision, and leadership command genuine respect. You need real authority — positions where you can set direction and hold people accountable, not merely advise from the sidelines. Be mindful that your drive for efficiency can read as impatience or steamrolling to more process-oriented colleagues. The environments where you thrive tend to be those where results are the scoreboard and the best idea wins, regardless of seniority.",
+      careers: [
+        { title: "Chief Executive Officer", reason: "Te and Ni operating at their highest level: the CEO role asks for both an unwavering long-term vision and the organizational authority to marshal every resource toward it. ENTJs rarely feel more alive than when they have a mandate, a team, and a difficult goal." },
+        { title: "Corporate Lawyer", reason: "Te precision in constructing ironclad arguments combined with Ni's ability to see where a case is heading before opposing counsel does. High-pressure courtrooms and complex negotiations are environments where ENTJs reliably thrive." },
+        { title: "Investment Fund Manager", reason: "Managing a portfolio under sustained performance pressure — where every decision has measurable, highly visible consequences — rewards the ENTJ's combination of strategic foresight and decisive execution without sentiment." },
+        { title: "Entrepreneur", reason: "Building an organization from nothing satisfies both the visionary and the executor in ENTJs. The freedom to set strategy, build culture, and hold people accountable to a standard of their own design is the role many ENTJs spend their careers working toward." },
+        { title: "Management Consultant", reason: "Diagnosing a broken organization, identifying the highest-leverage intervention, and delivering a bold recommendation with confidence — then moving on to the next challenge before the last one grows stale — suits the ENTJ's profile almost perfectly." },
+        { title: "Military Officer", reason: "Commanding large, complex operations toward decisive outcomes in high-stakes, rapidly changing environments is the professional context ENTJs were built for. The clear hierarchy and results-based accountability of military service align naturally with their values." },
+        { title: "Political Leader", reason: "The drive to reshape systems at scale, combined with the public confidence to lead in full view, makes ENTJs natural in political leadership. Their challenge is learning to bring people along rather than simply telling them where to go." },
+        { title: "Neurosurgeon", reason: "Te precision combined with Ni mastery of complex three-dimensional anatomical systems, performed under maximum pressure with zero margin for error. ENTJs who enter medicine often gravitate toward the most demanding surgical specialties for exactly this reason." }
+      ],
+      relationships: "ENTJs bring the same intentionality to relationships that they bring to everything — they choose partners deliberately, invest strategically, and expect the relationship to grow and improve over time. Their inferior Introverted Feeling means their feelings run considerably deeper than they typically let on, and accessing them requires real trust and the right environment. Partners who challenge ENTJs intellectually and who can hold their own under their characteristic directness will earn lasting respect and fierce loyalty. Where ENTJs need to consciously grow is in recognizing that relationships are not projects to be optimized — the people they love have emotional needs that don't respond to logic, and making space for genuine vulnerability on both sides is what transforms a functional partnership into a deeply fulfilling one.",
+      growth: "ENTJs grow by learning to slow down and genuinely listen — not to gather information for a counter-argument, but to understand how someone else actually feels. Developing patience with the pace at which people change, and accepting that strength includes vulnerability, will make them not just more effective leaders but more fulfilled human beings. The most powerful version of an ENTJ is one who has learned that winning is not always the point.",
+      compatibility: ["INTP", "INFP", "ISTP", "INTJ"]
     }
   },
 
   ENTP: {
     name: "The Debater",
-    emoji: "⚡",
-    tagline: "Smart and curious thinkers who cannot resist an intellectual challenge.",
+    emoji: "💡",
+    tagline: "Smart and curious thinkers who cannot resist an intellectual challenge — or an opportunity to flip an idea on its head.",
     free: {
-      overview: "ENTPs are innovative, clever, and expressive individuals who thrive on intellectual exploration. They enjoy deconstructing ideas and building new frameworks, often playing devil's advocate for the sheer joy of debate. Quick-witted and resourceful, ENTPs excel at generating creative solutions.",
-      strengths: [
-        "Quick thinking and witty",
-        "Excellent brainstorming abilities",
-        "Adaptable and resourceful",
-        "Charismatic and energetic",
-        "Not afraid to challenge the status quo"
-      ],
-      weaknesses: [
-        "Argumentative and confrontational",
-        "Difficulty with follow-through",
-        "Can be insensitive in debates",
-        "Dislike routine and repetitive tasks",
-        "May neglect practical details"
-      ]
+      overview: "ENTPs are inventive, quick-witted thinkers who thrive on intellectual challenge and the thrill of possibility. Their dominant Extraverted Intuition means they are perpetually scanning for connections, patterns, and angles that others have missed — while Introverted Thinking sharpens those raw insights into genuinely powerful arguments. They are energized by debate not out of a desire to win, but out of a genuine hunger to test every idea against the best possible opposition. No assumption is sacred, no authority is beyond questioning, and no problem is too complex to be worth attempting.",
+      strengths: ["Exceptionally creative and original thinker who connects ideas across fields", "Quick to identify patterns, loopholes, and overlooked possibilities", "Natural debater who sharpens ideas — and people — through challenge", "Enthusiastic and energizing presence in collaborative and creative settings", "Highly adaptable and genuinely comfortable with ambiguity and change"],
+      weaknesses: ["May argue a position they don't believe just for the intellectual exercise", "Tendency to start many projects and finish few", "Can neglect emotional and relational considerations when pursuing ideas", "Gets bored quickly once a problem feels solved or a system is understood", "Can come across as argumentative or dismissive of others' feelings"]
     },
     premium: {
-      careers: ["Entrepreneur", "Creative Director", "Patent Attorney", "Political Analyst", "Stand-up Comedian", "Product Manager", "Journalist", "Marketing Strategist"],
-      relationships: "ENTPs bring excitement, humor, and intellectual stimulation to relationships. They value partners who can engage in spirited discussions and keep up with their quick minds. They need freedom within their relationships and show love through playful banter, shared adventures, and helping their partner see new perspectives.",
-      growth: "ENTPs grow by developing follow-through on their many ideas and learning to sit with emotions rather than intellectualizing them. Practicing active listening without immediately formulating a rebuttal deepens their connections with others.",
-      compatibility: ["INFJ", "INTJ", "ENFJ", "INFP"]
+      workAptitude: "You are most engaged in environments that reward bold thinking, creative disruption, and the willingness to challenge what everyone else assumes is fixed. Entrepreneurial ventures, innovation labs, consulting, and any role that puts a genuinely new problem in front of you regularly will keep your energy high. Where you need to be deliberate is follow-through — your enthusiasm for new ideas can outpace your appetite for the sustained execution that turns them into reality. Building strong partnerships with detail-oriented implementers is one of the most powerful professional moves you can make.",
+      careers: [
+        { title: "Entrepreneur", reason: "Ne constantly generates new business concepts while Ti stress-tests them for internal logic and viability. The freedom to build something from a blank page — and the permission to pivot when the original idea proves wrong — keeps ENTPs engaged long after the initial excitement might otherwise fade." },
+        { title: "Trial Lawyer", reason: "High-stakes, real-time intellectual combat in the courtroom is exactly the environment Ne/Ti craves. ENTPs relish finding the argument no one else anticipated and have the verbal dexterity to improvise brilliantly when the plan needs to change mid-cross-examination." },
+        { title: "Venture Capitalist", reason: "Identifying transformative potential in early-stage companies before the market does requires the ability to see around corners — a Ne specialty. ENTPs who pair this pattern recognition with Ti rigor about team, model, and market timing develop exceptional investment instincts." },
+        { title: "Product Strategist", reason: "Connecting emerging technological possibilities with unmet human needs — and doing it before competitors realize the space exists — is exactly the kind of future-facing creative challenge that ENTPs find irresistible and naturally excel at." },
+        { title: "Research & Development Lead", reason: "ENTPs function as the creative engine of an organization's innovation pipeline, generating more genuinely novel concepts in a brainstorm than most teams produce in a quarter. The challenge is building the execution discipline to see the best ideas through to completion." },
+        { title: "Political Strategist", reason: "Modeling complex political systems, gaming out scenarios multiple moves ahead, and finding the rhetorical frame that changes the terms of a debate suits Ne/Ti in a real-world arena with high stakes and constant novelty." },
+        { title: "Stand-Up Comedian or Satirist", reason: "Pattern recognition combined with verbal agility and the irresistible urge to expose absurdity and puncture pomposity. ENTPs who find this outlet often wonder why it took them so long to get there." },
+        { title: "Startup Advisor", reason: "The freedom to parachute into a broken or stuck organization, generate five solutions the team hasn't considered, and hand the execution back to people better suited to it is the intellectual consultant's dream — and the ENTP's natural operating mode." }
+      ],
+      relationships: "ENTPs are genuinely engaging and intellectually generous partners who bring curiosity, humor, and a talent for reframing problems into their closest relationships. They are drawn to partners who can match their verbal agility and who won't feel threatened by spirited debate — for an ENTP, arguing about ideas is a form of intimacy, not aggression. Their tertiary Extraverted Feeling means they are more emotionally perceptive than they often let on, and they genuinely want the people they love to thrive. The challenge is consistency — their enthusiasm for new experiences and ideas can make sustained emotional investment feel like a constraint rather than a choice. Partners who give them intellectual freedom while anchoring them in a relationship they are genuinely excited to return to will find the most loyal and devoted version of the ENTP.",
+      growth: "ENTPs grow by learning that winning an argument and understanding someone's feelings are two completely different things — and that the second one matters more in relationships. Developing the habit of listening without immediately constructing a rebuttal, and honoring long-term commitments even when the initial excitement has faded, will build the kind of depth in relationships and projects that pure intellectual brilliance cannot provide on its own.",
+      compatibility: ["INFJ", "INTJ", "ENFJ", "ENTJ"]
     }
   },
 
   INFJ: {
     name: "The Advocate",
-    emoji: "🌌",
-    tagline: "Quiet and mystical, yet very inspiring and tireless idealists.",
+    emoji: "🌿",
+    tagline: "Quiet visionaries with a rare gift for perceiving what others need — and a fierce commitment to making it real.",
     free: {
-      overview: "INFJs are the rarest personality type, known for their deep insight into people and complex situations. They combine a rich inner life with genuine compassion for others, working quietly behind the scenes to create positive change. INFJs are driven by a strong sense of purpose and idealism.",
-      strengths: [
-        "Deep insight into people and situations",
-        "Strong values and sense of purpose",
-        "Creative and visionary thinking",
-        "Excellent listeners and counselors",
-        "Determined and passionate about causes"
-      ],
-      weaknesses: [
-        "Prone to burnout from absorbing others' emotions",
-        "Perfectionistic about their ideals",
-        "Can be overly private and hard to know",
-        "Difficulty with confrontation",
-        "May set unrealistically high expectations"
-      ]
+      overview: "INFJs are the rarest of all personality types, combining a profound depth of insight with a genuine commitment to improving the human condition. Their dominant Introverted Intuition gives them an almost uncanny ability to perceive patterns, motivations, and futures that others cannot yet see, while their auxiliary Extraverted Feeling means they are deeply attuned to the emotional world of the people around them. They are idealists who back their vision with quiet but relentless determination, and they often carry — sometimes from an early age — a sense that they are here to do something meaningful.",
+      strengths: ["Deep empathy and genuine concern for others' wellbeing", "Rare ability to perceive patterns and foresee outcomes", "Decisive and purposeful once a clear direction emerges", "Creatively articulate in expressing complex ideas and emotions", "Deeply committed to personal values and integrity"],
+      weaknesses: ["Prone to absorbing others' emotions as their own", "Tendency to set impossibly high personal standards", "May withdraw or shut down entirely when pushed past their limits", "Can struggle to focus on practical, present-moment details", "Rare self-disclosure can leave them feeling isolated and misunderstood"]
     },
     premium: {
-      careers: ["Counselor / Therapist", "Author / Writer", "Nonprofit Director", "Psychologist", "Documentary Filmmaker", "UX Researcher", "Social Worker", "Professor of Humanities"],
-      relationships: "INFJs seek deep, meaningful connections and are among the most devoted partners. They intuitively understand their partner's needs and work tirelessly to nurture the relationship. However, they need a partner who reciprocates this depth and respects their need for solitude to recharge.",
-      growth: "INFJs grow by setting healthy boundaries and learning that they cannot save everyone. Accepting imperfection in themselves and others, and expressing their own needs instead of always prioritizing others, leads to more sustainable and joyful living.",
-      compatibility: ["ENTP", "ENFP", "INTJ", "INFP"]
+      workAptitude: "Meaningful work is not a nice-to-have for you — it is a fundamental requirement. You perform at your highest level when you can see a clear line between your daily effort and a larger purpose that genuinely matters. Counseling, nonprofit leadership, education, and writing are natural fits, but the specific field matters less than the culture: you need a workplace that values people over pure profit and where integrity is practiced, not just posted on the wall. High-conflict, competitive, or emotionally callous environments will drain you far faster than they do most types — choosing your environment carefully is one of the wisest career decisions you can make.",
+      careers: [
+        { title: "Therapist or Psychologist", reason: "Fe attunement to emotional states combined with Ni pattern recognition of behavioral dynamics makes INFJs naturally gifted at understanding what is happening beneath the surface of what clients say. The therapeutic relationship — long, deep, and oriented toward genuine transformation — is the ideal professional container for their gifts." },
+        { title: "Author or Novelist", reason: "Ni generates rich, symbolic inner worlds that demand expression; Fe gives INFJs an instinctive sense of what emotional truth will resonate with readers. The best INFJ writing makes people feel that someone finally put words to what they have always felt but could never say." },
+        { title: "Human Rights Advocate", reason: "The combination of Ni vision for how things could be and Fe moral urgency about how people are currently suffering creates the perfect fuel for sustained advocacy. INFJs in this field rarely burn out from lack of caring — they burn out from caring too much, which is a different problem with a different solution." },
+        { title: "Professor or Educator", reason: "INFJs who find their subject channel Ni depth and Fe warmth into teaching experiences that students often describe as transformative. They don't just teach content — they communicate a way of seeing the world." },
+        { title: "Nonprofit Director", reason: "The marriage of Ni long-range vision and Fe commitment to human wellbeing makes INFJs some of the most mission-aligned organizational leaders of any type. They build cultures that reflect their values and attract people who share them." },
+        { title: "UX Researcher", reason: "Ni's ability to synthesize complex behavioral patterns combined with Fe's empathy for user experience creates someone who can translate messy qualitative data into clear design insight — and who cares deeply about getting it right because real people are affected." },
+        { title: "Organizational Psychologist", reason: "Applying Ni and Fe to the systemic health of teams and organizations — diagnosing hidden dynamics, predicting how change will affect people, building cultures where people can genuinely thrive — is work that INFJs find both intellectually stimulating and morally satisfying." },
+        { title: "Documentary Filmmaker", reason: "Ni pattern recognition for the hidden story beneath the surface events, combined with Fe for the human stakes, creates narratives that change how audiences understand the world. INFJs often find that film lets them say in two hours what would take a book to articulate." }
+      ],
+      relationships: "INFJs are among the most devoted and deeply attentive partners of any type, but they extend this access to very few people — entry into their inner world is a privilege that is earned slowly and can be revoked permanently. Their Fe makes them acutely aware of what others feel, and their Ni means they are quietly constructing an ever-more-accurate model of their partner — noticing patterns, anticipating needs, and working to create conditions where the person they love can fully thrive. Because they are rare and often feel profoundly misunderstood, finding someone who truly sees them is transformative — and when they do commit, it is absolute. Partners who create genuine psychological safety — who are patient, consistent, and can handle periods of INFJ withdrawal without interpreting it as rejection — will be rewarded with a depth of loyal, intuitive companionship that is nearly impossible to find anywhere else.",
+      growth: "INFJs grow by learning to extend the compassion they so freely give others to themselves. Recognizing that your own needs matter as much as everyone else's, and that withdrawal is sometimes healthy self-protection rather than failure, will help you sustain the generous spirit that defines you. Learning to live in the present moment — rather than always scanning the horizon — is the practice that grounds your extraordinary inner vision in daily joy.",
+      compatibility: ["ENFP", "ENTP", "INTJ", "INFP"]
     }
   },
 
   INFP: {
     name: "The Mediator",
-    emoji: "🦋",
-    tagline: "Poetic, kind, and altruistic people, always eager to help a good cause.",
+    emoji: "🌸",
+    tagline: "Poetic, kind, and deeply idealistic — always searching for the good in people and the meaning in everything.",
     free: {
-      overview: "INFPs are thoughtful, creative individuals guided by their deeply held values and desire to make the world a better place. They possess a rich imagination and a quiet determination that often surprises those who underestimate them. INFPs are drawn to authenticity and emotional depth in all areas of life.",
-      strengths: [
-        "Deep empathy and compassion",
-        "Rich imagination and creativity",
-        "Strong personal values and integrity",
-        "Open-minded and accepting of others",
-        "Passionate about meaningful causes"
-      ],
-      weaknesses: [
-        "Overly idealistic and impractical",
-        "Tendency to take things too personally",
-        "Difficulty with practical daily tasks",
-        "Can be self-isolating when stressed",
-        "Struggle with criticism and conflict"
-      ]
+      overview: "INFPs are idealistic, empathetic souls guided by a deeply held inner value system that they rarely compromise and never fully abandon. Their dominant Introverted Feeling means they experience emotions with unusual depth and authenticity, and they are driven above all by a need to live in alignment with who they truly are. Curious and imaginative, they explore the world through the lens of meaning and human experience, and they have a rare gift for articulating the inner lives of people in ways that make others feel profoundly seen and understood.",
+      strengths: ["Deeply authentic and guided by strong, unwavering personal values", "Highly empathetic and perceptive of others' hidden emotional states", "Richly creative with a vivid and nuanced inner imaginative world", "Passionate and deeply dedicated when a cause captures their heart", "Open-minded and genuinely curious about diverse human experiences"],
+      weaknesses: ["Can take criticism or conflict deeply and painfully personally", "Tendency to idealize people and then feel disillusioned by their reality", "May struggle with practical execution, deadlines, and external structure", "Prone to over-empathizing to the point of emotional exhaustion", "Can be slow to take action outside the safety of their inner world"]
     },
     premium: {
-      careers: ["Writer / Poet", "Graphic Designer", "Art Therapist", "Environmental Scientist", "Music Therapist", "Human Rights Advocate", "Librarian", "Counseling Psychologist"],
-      relationships: "INFPs are deeply romantic and loyal partners who crave authentic emotional connection. They express love through creative gestures, heartfelt words, and unwavering support of their partner's dreams. They need a partner who appreciates their emotional depth and doesn't dismiss their idealism.",
-      growth: "INFPs grow by developing practical life skills and learning to take action on their ideals rather than just dreaming about them. Accepting that the world won't always meet their standards and finding beauty in imperfection brings them greater peace.",
-      compatibility: ["ENFJ", "ENTJ", "INFJ", "ENFP"]
+      workAptitude: "You are motivated by personal meaning and authentic self-expression in a way that most personality types are not. When your work connects to your values, you bring a level of dedication, creativity, and emotional depth that is rare and powerful. When it doesn't, no amount of pay or prestige will compensate for the hollowness you feel. Roles with creative autonomy, human-centered impact, and a degree of flexibility over how you work will consistently bring out your best. Rigid hierarchies, purely transactional environments, and workplaces that prioritize conformity over originality are the fastest path to your quiet disengagement.",
+      careers: [
+        { title: "Writer or Novelist", reason: "Fi depth of feeling combined with Ne creative imagination produces literature capable of making readers feel less alone in their inner experience. INFPs who write are not just expressing themselves — they are building a bridge between their inner world and everyone who has ever felt the same way but lacked the words." },
+        { title: "Therapist or Counselor", reason: "Fi empathy runs deep enough to sit with people in their darkest moments without flinching, while Ne helps INFPs find unexpected angles of healing that more linear thinkers might miss. They make clients feel genuinely safe and genuinely seen — a combination that is therapeutically powerful." },
+        { title: "Graphic Designer or Illustrator", reason: "Ne visual creativity channeled through Fi aesthetic sensibility produces art that feels personal even when it serves a client brief. INFPs who find visual expression often describe it as the most honest thing they do professionally." },
+        { title: "Social Worker", reason: "The authentic conviction that every person deserves dignity — combined with the patience to advocate for those who cannot advocate for themselves — sustains INFPs in roles that would exhaust more pragmatic types." },
+        { title: "Film Director", reason: "The ability to hold a complete emotional and thematic vision and communicate it to an entire team — drawing out authentic performances, choosing every visual detail with intention — suits Fi's depth and Ne's imaginative range perfectly." },
+        { title: "Musician or Composer", reason: "Fi emotional depth externalizing itself through sound. INFPs who find music often describe it as the only place they feel fully and honestly expressed, without the social friction that verbal communication sometimes creates." },
+        { title: "Environmental or Social Activist", reason: "Authentic personal values combined with the emotional endurance to fight for something bigger than oneself over the long haul — especially when the cause involves protecting what or who cannot protect itself." },
+        { title: "Human Resources Specialist", reason: "In healthy organizations, INFPs' genuine empathy and commitment to fairness make them exceptional advocates for employee wellbeing and equitable culture — work that satisfies both Fi's values and Ne's deep interest in human dynamics." }
+      ],
+      relationships: "INFPs love with a depth and sincerity that is rare and quietly overwhelming. For them, a relationship is not just a partnership — it is one of the primary places where their rich inner world makes genuine contact with another person's, and the possibility of being truly known and truly knowing someone drives everything they hope for in love. They are devoted, emotionally attentive, and often aware of their partner's feelings before their partner is. The challenge is a tendency to idealize the relationship or the person — building a version of both in their imagination that inevitably diverges from the real thing. Learning to love the actual, imperfect person in front of them — rather than the perfected version they have quietly constructed — is the central relational growth edge for most INFPs. Partners who honor their need for emotional depth, respect their values without demanding justification, and give them space to process internally will find one of the most devoted and imaginative companions of any type.",
+      growth: "INFPs grow by learning to take action on their values in the external world rather than processing them exclusively within. Developing the ability to receive feedback without interpreting it as a verdict on their worth, and building enough practical structure to actually finish the creative and meaningful projects they start, will allow their extraordinary inner richness to make a mark on the world that matches the depth of what they feel inside.",
+      compatibility: ["ENFJ", "ENTJ", "INFJ", "ISFJ"]
     }
   },
 
   ENFJ: {
     name: "The Protagonist",
     emoji: "🌟",
-    tagline: "Charismatic and inspiring leaders who are able to mesmerize their listeners.",
+    tagline: "Charismatic and inspiring leaders who can mesmerize even the most cynical room — because they actually mean it.",
     free: {
-      overview: "ENFJs are warm, empathetic leaders who are genuinely interested in helping others reach their potential. They have an extraordinary ability to read people and situations, using this insight to guide, inspire, and motivate those around them. ENFJs are driven by their vision of what people can become.",
-      strengths: [
-        "Natural ability to lead and inspire",
-        "Highly empathetic and understanding",
-        "Excellent communication skills",
-        "Organized and reliable",
-        "Strong sense of community and belonging"
-      ],
-      weaknesses: [
-        "Can be overly idealistic about people",
-        "Tendency to neglect their own needs",
-        "May become manipulative under stress",
-        "Overly sensitive to criticism",
-        "Difficulty making tough, impersonal decisions"
-      ]
+      overview: "ENFJs are natural leaders and people-developers who combine a warm, magnetic social presence with a penetrating insight into who people are and what they need to grow. Their dominant Extraverted Feeling makes them extraordinarily attuned to the emotional atmosphere of any room they enter, while Introverted Intuition gives them the rare ability to see where people and situations are heading long before others do. They are among the most motivated of all types to help others actualize their potential, and they do so with an energy and conviction that draws people naturally and powerfully to them.",
+      strengths: ["Exceptional emotional intelligence and deep empathy for others", "Naturally inspiring leadership presence that moves people to action", "Deeply perceptive of others' hidden needs, growth edges, and potential", "Committed and fiercely devoted in all meaningful relationships", "Extraordinary ability to communicate, persuade, and connect with warmth"],
+      weaknesses: ["Tendency to take on others' emotional burdens as if they were their own", "May suppress personal needs to maintain harmony and avoid conflict", "Can be overly idealistic about people and relationships", "Struggles deeply with criticism directed at them personally", "Risk of burnout from sustained over-giving without replenishment"]
     },
     premium: {
-      careers: ["Life Coach", "High School Teacher", "HR Director", "Public Relations Manager", "Diplomat", "Event Planner", "Nonprofit Executive", "Sales Director"],
-      relationships: "ENFJs are devoted partners who pour their heart into relationships. They anticipate their partner's needs, plan thoughtful surprises, and work constantly to strengthen the bond. They need appreciation and affirmation in return, and a partner who encourages them to also take care of themselves.",
-      growth: "ENFJs grow by learning to prioritize their own needs without guilt. Recognizing that they cannot control how others grow and that sometimes people need to learn from their own mistakes helps them find balance in their natural desire to help.",
-      compatibility: ["INFP", "ISFP", "INTP", "ENTP"]
+      workAptitude: "You are one of the most naturally gifted leaders and people-developers of any type. You read teams and individuals with unusual accuracy, knowing instinctively how to inspire, motivate, and bring out the best in people — and you do it in a way that builds genuine loyalty rather than mere compliance. Mission-driven organizations, education, coaching, and team leadership roles allow you to work squarely within your strengths. The area to manage carefully is over-extension — your tendency to absorb others' problems as your own can lead to burnout if you don't build firm limits between your professional investment and your personal reserves.",
+      careers: [
+        { title: "Executive Coach or Life Coach", reason: "Fe attunement to exactly where someone is stuck combined with Ni vision for the person they could become — the ideal coach doesn't just hear what clients say, they see what clients cannot yet see about themselves. ENFJs do this instinctively and with genuine warmth." },
+        { title: "School Principal or Educational Director", reason: "Leading an entire learning community with warmth, vision, and the ability to inspire both staff and students toward shared goals is exactly the kind of leadership ENFJs were built for — people-first, purpose-driven, and built for the long arc of institutional change." },
+        { title: "Nonprofit Executive Director", reason: "Combining Ni long-range mission thinking with Fe's ability to build the relationships and culture that sustain an organization over time. ENFJs in this role are often the reason a nonprofit survives its hardest years and emerges stronger." },
+        { title: "Human Resources Director", reason: "Shaping organizational culture, developing people's capabilities, and navigating complex interpersonal dynamics at the institutional level suits ENFJs who want their people skills to have maximum reach and systemic impact." },
+        { title: "Therapist or Counselor", reason: "Fe creates instant therapeutic rapport and psychological safety; Ni recognizes behavioral patterns and sees the path to healing before the client does. ENFJs who enter this field need to be vigilant about their own boundaries — they care so much that the work can follow them home." },
+        { title: "Political Campaign Manager", reason: "Mobilizing people toward a shared vision, reading the emotional temperature of every room, and knowing exactly what message each audience needs to hear — this is Fe and Ni applied to the highest-stakes persuasion environment there is." },
+        { title: "Corporate Trainer or L&D Director", reason: "Building the programs and relationships that systematically develop people's capabilities across an entire organization. ENFJs who take this role tend to transform it from an administrative function into a genuine culture-shaping force." },
+        { title: "Journalist or Documentary Director", reason: "Ni sees the human story living inside the data or the news event; Fe makes sources and subjects feel safe enough to share it authentically. ENFJ journalists and directors produce work that changes minds because it first changes how people feel." }
+      ],
+      relationships: "ENFJs are devoted, perceptive, and actively growth-oriented partners who often see their partner's potential more clearly than the partner sees it themselves — and who quietly make it a project to help them reach it. Their Fe means they are exquisitely attuned to every shift in their partner's emotional state, moving quickly to restore harmony and address what's unspoken. What they need most in return is a partner who will turn that attentiveness back on them — because ENFJs are so practiced at taking care of others that they can go a long time without voicing their own needs, and even longer without being asked. Partners who create the specific safety for an ENFJ to be the one being cared for — rather than always the caregiver — will unlock a depth of gratitude and intimacy that is among the most rewarding any relationship can offer.",
+      growth: "ENFJs grow by learning that their own needs, feelings, and desires are not inconveniences to be managed but legitimate parts of every relationship that deserve the same quality of attention they so freely give others. Building the ability to say no with warmth and clarity, and to receive care as gracefully as they give it, will make the relationships they invest so much in genuinely sustainable for the long run.",
+      compatibility: ["INFP", "ISFP", "INTP", "INFJ"]
     }
   },
 
   ENFP: {
     name: "The Campaigner",
-    emoji: "🎭",
-    tagline: "Enthusiastic, creative, and sociable free spirits who always find a reason to smile.",
+    emoji: "✨",
+    tagline: "Free-spirited and creative, ENFPs see life as a rich tapestry of connections — and people as endlessly fascinating puzzles worth solving.",
     free: {
-      overview: "ENFPs are imaginative, enthusiastic individuals who see life as full of possibilities. They are warmly perceptive and enjoy connecting with people on a deep level. Their energy is contagious, and they have a natural talent for inspiring others and sparking creative ideas.",
-      strengths: [
-        "Enthusiastic and inspiring energy",
-        "Excellent people skills and empathy",
-        "Highly creative and imaginative",
-        "Flexible and spontaneous",
-        "Ability to see potential in everyone"
-      ],
-      weaknesses: [
-        "Difficulty focusing and following through",
-        "Overly optimistic and unrealistic",
-        "Dislike of routine and mundane tasks",
-        "Can be people-pleasers",
-        "Emotional intensity can be overwhelming"
-      ]
+      overview: "ENFPs are enthusiastic, creative, and deeply human-centered personalities who approach life as a rich landscape of possibilities waiting to be explored. Their dominant Extraverted Intuition means they are perpetually generating new ideas, connections, and interpretations — while Introverted Feeling ensures these explorations are always anchored in authentic values and genuine concern for people. They are among the most socially dynamic of all types, bringing genuine warmth and infectious enthusiasm wherever they go, while possessing a depth of inner conviction that often surprises people who encounter them only as charming.",
+      strengths: ["Exceptionally warm, genuine, and energizing social presence", "Highly creative with a natural instinct for connecting ideas across domains", "Deeply attuned to people's hidden potential and unique qualities", "Passionately persuasive when championing causes they truly believe in", "Adaptable and enthusiastic in the face of change, novelty, and new challenges"],
+      weaknesses: ["Can struggle with follow-through once initial excitement fades", "Tendency to people-please at the expense of their own genuine needs", "May take on too many projects and spread energy too thin", "Prone to emotional intensity that can overwhelm more reserved partners", "Can have difficulty with routine, administrative tasks, and hard deadlines"]
     },
     premium: {
-      careers: ["Creative Director", "Journalist", "Entrepreneur", "Motivational Speaker", "Brand Strategist", "Travel Writer", "Actor / Performer", "Innovation Consultant"],
-      relationships: "ENFPs are passionate, affectionate partners who bring joy, adventure, and deep emotional connection to relationships. They want to truly know and be known by their partner. They express love through words of affirmation, quality time, and creating shared experiences that build lasting memories.",
-      growth: "ENFPs grow by developing discipline and learning to complete what they start. Creating systems for organization and practicing mindfulness helps them channel their abundant energy into meaningful accomplishments rather than scattered efforts.",
-      compatibility: ["INTJ", "INFJ", "ENTJ", "INTP"]
+      workAptitude: "You are energized by ideas, people, and the feeling that something genuinely new and meaningful is being created. Roles that offer variety, human connection, creative latitude, and the chance to champion something you believe in will draw out your enthusiasm and natural persuasiveness. Where ENFPs typically need deliberate support is in the execution phase — the part after the exciting launch where sustained, methodical follow-through is required. Building habits and systems that help you honor long-term commitments without dampening your spontaneous energy is the professional challenge that, when solved, makes you extraordinarily effective.",
+      careers: [
+        { title: "Entrepreneur or Startup Founder", reason: "Ne generates more viable business concepts before breakfast than most people have in a year; Fi ensures the venture is built around something that genuinely matters to people. ENFPs who find the right co-founder to handle operational execution often build remarkable companies." },
+        { title: "Advertising Creative Director", reason: "The combination of Ne's lateral connections across culture and Fi's instinct for what will emotionally resonate makes ENFPs naturals at creating campaigns that feel alive rather than manufactured — the difference between advertising that moves people and advertising they skip." },
+        { title: "Journalist or Investigative Reporter", reason: "Ne pattern recognition spots the story hiding inside events before anyone else sees it; Fi moral compass ensures it gets told in a way that matters and treats its subjects as full human beings rather than props." },
+        { title: "Talent Agent or Recruiter", reason: "ENFPs have an unusual gift for seeing what someone could become — which role, which team, which opportunity would allow them to fully actualize — and the social intelligence to connect the right people at exactly the right moment." },
+        { title: "Motivational Speaker or Executive Coach", reason: "Combining authentic personal conviction with natural charisma and genuine insight into what holds people back. ENFPs who develop this skill find that audiences and clients sense immediately that the enthusiasm is real — because it always is." },
+        { title: "Brand Strategist", reason: "Ne sees the cultural moment and the emerging human desire underneath it; Fi understands what values a brand needs to embody to earn genuine trust; Te tertiary builds the strategic framework around both. ENFPs are often the most intuitive brand thinkers in the room." },
+        { title: "Social Impact Entrepreneur", reason: "Building organizations that are simultaneously profitable and purpose-driven — proving that doing good and doing well are not mutually exclusive — is a model that ENFPs were born to champion, build, and make compelling to the world." },
+        { title: "Actor or Film Director", reason: "Accessing the full range of human emotion authentically — and being genuinely curious about every character's inner logic and contradictions — creates performances and storytelling that audiences feel rather than merely watch." }
+      ],
+      relationships: "ENFPs are among the most romantic, imaginatively attentive, and emotionally generous partners of any type — especially in the beginning, when their Ne is electrified by the novelty of a new person and their Fi is fully engaged in the project of knowing them. They make their partners feel like the most interesting, seen, and valued person in the world — and they mean every word of it in that moment. The challenge is that Fi-driven authenticity means ENFPs need to genuinely feel what they express, and if a relationship stops growing or starts to feel confining, their emotional engagement can shift in ways that confuse partners who remember the intensity of the beginning. What ENFPs need most is a relationship that keeps feeling like a genuine adventure — where both people are still becoming, and where there is always something new to discover about each other. Partners who respect their freedom, engage deeply with their ideas, and grow alongside them will experience one of the most joyful and devoted forms of love any type offers.",
+      growth: "ENFPs grow by learning that depth requires commitment, and that the richest version of anything — a relationship, a project, a creative work, a career — is only available on the other side of sustained effort through the unglamorous middle. Building the finishing habits that allow their extraordinary generative energy to produce lasting results, and developing genuine tolerance for the routine that every meaningful life eventually requires, will make the difference between a life full of brilliant beginnings and one full of real accomplishments.",
+      compatibility: ["INTJ", "INFJ", "ENFJ", "ENTJ"]
     }
   },
 
   ISTJ: {
     name: "The Logistician",
     emoji: "📋",
-    tagline: "Practical and fact-minded individuals whose reliability cannot be doubted.",
+    tagline: "Practical and fact-minded, ISTJs are dependable to their core — the quiet foundation on which reliable organizations are built.",
     free: {
-      overview: "ISTJs are responsible, thorough, and dependable individuals who take their commitments seriously. They value tradition, loyalty, and order, and they work steadily to fulfill their duties. ISTJs are the backbone of many organizations, providing stability and ensuring things run smoothly.",
-      strengths: [
-        "Extremely reliable and responsible",
-        "Methodical and detail-oriented",
-        "Strong sense of duty and commitment",
-        "Practical and grounded",
-        "Honest and direct communicators"
-      ],
-      weaknesses: [
-        "Can be rigid and resistant to change",
-        "Difficulty expressing emotions",
-        "May be judgmental of non-traditional approaches",
-        "Tendency to take on too much responsibility",
-        "Can be perceived as cold or insensitive"
-      ]
+      overview: "ISTJs are responsible, thorough, and dependable to their core. Their dominant Introverted Sensing gives them a vast internal database of past experiences, established procedures, and proven methods that they draw on to navigate the present with precision and reliability. They are driven by a deep sense of duty and take their commitments seriously — if an ISTJ says they will do something, consider it done. Reserved and steady, they are often the quiet foundation on which families, teams, and institutions actually depend.",
+      strengths: ["Exceptionally reliable and consistent in every commitment they make", "Highly organized with strong attention to detail and procedure", "Strong personal integrity and deep sense of duty", "Methodical and thorough — rarely overlooks what matters", "Calm and composed under pressure when others lose their footing"],
+      weaknesses: ["Can be resistant to change or new approaches that lack proven track records", "May come across as rigid or inflexible when their methods are questioned", "Tendency to be overly critical of those who don't meet their standards", "Can struggle to express emotions openly or spontaneously", "May have difficulty adapting when established rules or systems are disrupted"]
     },
     premium: {
-      careers: ["Accountant / Auditor", "Civil Engineer", "Military Officer", "Database Administrator", "Financial Analyst", "Supply Chain Manager", "Quality Assurance Analyst", "Police Detective"],
-      relationships: "ISTJs show love through actions rather than words — they are the partner who remembers every important date, keeps promises, and provides steady, unwavering support. They need a partner who appreciates their reliability and understands that their consistency is their way of saying 'I love you.'",
-      growth: "ISTJs grow by embracing flexibility and recognizing that there are multiple valid ways to approach a situation. Learning to express their feelings verbally and being open to new experiences enriches their personal relationships and worldview.",
-      compatibility: ["ESFP", "ESTP", "ISFJ", "ESTJ"]
+      workAptitude: "You are the backbone of reliable organizations everywhere. You bring an extraordinary combination of precision, follow-through, and institutional loyalty that makes you indispensable in roles where consistency and accountability directly drive results. Structured environments with clear expectations, established processes, and measurable outcomes are where you thrive. In workplaces that operate in constant change or ambiguity, you serve most effectively as the anchor — ensuring quality doesn't erode while everyone else navigates the uncertainty. Be aware that environments without structure may feel draining rather than exciting, and that is not a weakness — it is self-knowledge.",
+      careers: [
+        { title: "Judge or Magistrate", reason: "Si mastery of precedent and established law combined with Te systematic application of those standards creates the judicial mind at its most natural. ISTJs are among the most temperamentally suited of any type to a role that demands impartiality, rigor, and the courage to apply principle consistently regardless of social pressure." },
+        { title: "Accountant or Auditor", reason: "Si precision with historical financial data combined with Te systematic verification of accuracy is the exact cognitive profile that accounting rewards. ISTJs who find this field experience the rare satisfaction of a job that is done truly correctly — not approximately." },
+        { title: "Civil Engineer", reason: "Methodical design within established engineering parameters, with decades of reliable performance as the success metric, suits both Si's preference for proven methods and the ISTJ's deep sense of responsibility for outcomes that affect others." },
+        { title: "Military Officer", reason: "Clear hierarchy, established protocol, and results-based accountability in high-stakes environments align naturally with the ISTJ's values and cognitive strengths. The expectation that a given word is an absolute commitment is one they meet without effort." },
+        { title: "Database Administrator", reason: "Maintaining complex, mission-critical systems with the precision and consistency that prevents organizational data from becoming unreliable — quiet, largely invisible work that ISTJs take as seriously as any public-facing role, because the systems actually matter." },
+        { title: "Surgeon", reason: "Meticulous adherence to established procedure combined with steady composure in high-pressure operating environments. ISTJs who enter medicine gravitate toward surgical specialties where precision and protocol are the difference between outcomes." },
+        { title: "Air Traffic Controller", reason: "Real-time application of established protocols under genuine pressure, where deviating from procedure has immediate and catastrophic consequences. ISTJs experience this kind of responsibility not as stress but as purpose." },
+        { title: "Compliance Officer", reason: "Si encyclopedic knowledge of regulations and established requirements combined with Te systematic enforcement and documentation. ISTJs in compliance often become the institutional memory and moral backbone of the organizations they serve." }
+      ],
+      relationships: "ISTJs express love quietly, consistently, and entirely through action — they are not the type to fill a room with declarations, but they are absolutely the type to still be there twenty years later, having never broken a promise. Their Si means they carry a detailed internal map of their partner's history, preferences, and patterns — noticing when something is off before it has been said, and remembering what mattered last year with the same clarity as last week. Partners often discover over time that the ISTJ's apparent reserve conceals a depth of loyalty and care that is both rare and profound. The challenge is that ISTJs may expect their partner to understand that reliability is love — and may not realize that some partners need the words as well as the actions. Learning to occasionally translate their inner experience into explicit emotional expression will deepen their already steadfast relationships significantly.",
+      growth: "ISTJs grow by developing a genuine tolerance for ambiguity and change that goes beyond intellectual acceptance. Recognizing that new approaches can sometimes improve on tradition — rather than merely threatening it — will expand both their professional effectiveness and the depth of their relationships. Practicing vulnerability with trusted people, and occasionally asking for help rather than simply carrying the load alone, are the growth edges that unlock the warmest and most fully human version of this type.",
+      compatibility: ["ESFP", "ESTP", "ENFP", "ESTJ"]
     }
   },
 
   ISFJ: {
     name: "The Defender",
     emoji: "🛡️",
-    tagline: "Very dedicated and warm protectors, always ready to defend their loved ones.",
+    tagline: "Dedicated and warm-hearted, ISFJs are always ready to defend the people they love — often before those people know they need defending.",
     free: {
-      overview: "ISFJs are caring, reliable individuals who find great satisfaction in helping others and maintaining harmony. They are observant and attentive to the needs of those around them, often going above and beyond without seeking recognition. ISFJs are the quiet guardians who hold communities together.",
-      strengths: [
-        "Incredibly supportive and reliable",
-        "Keen observation of others' needs",
-        "Patient and devoted caretakers",
-        "Strong memory for important details",
-        "Hardworking and thorough"
-      ],
-      weaknesses: [
-        "Difficulty saying no and setting boundaries",
-        "Tendency to repress their own needs",
-        "Overly sensitive to criticism",
-        "Resistant to change and new methods",
-        "May become passive-aggressive when stressed"
-      ]
+      overview: "ISFJs are warm, dedicated, and quietly extraordinary in their commitment to the people and institutions they care about. Their dominant Introverted Sensing gives them an encyclopedic memory for the details, preferences, and emotional histories of the people they love, while Extraverted Feeling drives a genuine desire to use that knowledge to make others feel comfortable, seen, and genuinely cared for. They are among the most selflessly devoted of all types — and among the most likely to go unrecognized for it, since their greatest contributions tend to be the invisible ones.",
+      strengths: ["Warm and genuinely caring in every interaction, especially with those they love", "Exceptional memory for personal details that truly matter to others", "Deeply reliable and consistent in every commitment and obligation", "Patient and steady in supporting others through difficulty and pain", "Strong sense of duty to the people, communities, and institutions they serve"],
+      weaknesses: ["Tendency to place others' needs so far ahead of their own that their own go unmet", "Can struggle to say no or establish clear limits with people they care about", "May avoid conflict to the point of suppressing legitimate grievances for too long", "Tendency to internalize criticism as a personal failure rather than useful feedback", "Can resist change when it threatens established routines and familiar ways"]
     },
     premium: {
-      careers: ["Registered Nurse", "Elementary Teacher", "Social Worker", "Dental Hygienist", "Librarian", "Office Manager", "Veterinary Technician", "Interior Designer"],
-      relationships: "ISFJs are devoted partners who express love through acts of service — cooking meals, remembering preferences, and creating a warm, comfortable home. They need partners who notice and appreciate their efforts and who reciprocate with emotional warmth and verbal appreciation.",
-      growth: "ISFJs grow by learning to prioritize self-care and asserting their own needs. Recognizing that saying no is not selfish, and that they deserve the same level of care they give to others, transforms their relationships and well-being.",
-      compatibility: ["ESFP", "ESTP", "ISTJ", "ENFJ"]
+      workAptitude: "You are quietly indispensable in almost any environment you commit to. Your reliability, attention to detail, and genuine care for the people you work alongside make you the kind of colleague that organizations depend on more than they usually acknowledge. Service-oriented roles in healthcare, education, administration, and social work align naturally with your temperament. The professional pattern to watch is a tendency to absorb workload without advocating for yourself — your comfort with giving without asking means others may not realize how much you are carrying. Developing the habit of naming your contributions clearly and setting limits on what you take on is one of the highest-leverage professional skills you can build.",
+      careers: [
+        { title: "Registered Nurse", reason: "Si attentiveness to patient history and subtle physical changes combined with Fe genuine care for the person behind the chart makes ISFJs among the most naturally gifted nurses of any type. Patients remember them long after discharge." },
+        { title: "Elementary School Teacher", reason: "Si patience and memory for each child's individual learning history combined with Fe warmth creates the classroom environment where children feel safe enough to actually learn. ISFJs in this role often become the teacher a student mentions decades later." },
+        { title: "Social Worker", reason: "Committed, consistent advocacy for vulnerable people through Fe moral care and Si memory for the specific circumstances of each case. ISFJs who find sustainable limits in this field bring an authenticity to the work that clients feel immediately." },
+        { title: "Librarian or Archivist", reason: "Si organizational mastery of accumulated knowledge combined with quiet, unhurried service to the community's intellectual life. ISFJs often describe this work as the professional expression of something they would do anyway." },
+        { title: "Human Resources Coordinator", reason: "Remembering what matters to every person in an organization — their circumstances, their concerns, their history — and using Fe warmth to create a workplace where people feel genuinely seen and fairly treated." },
+        { title: "Occupational or Physical Therapist", reason: "Detailed, patient-centered care delivered with genuine emotional attentiveness and the Si discipline to track each patient's specific progress over time. ISFJs in therapy roles rarely rush a session — they understand that the relationship is part of the treatment." },
+        { title: "Nonprofit Program Manager", reason: "Steady, meticulous behind-the-scenes execution that keeps mission-driven organizations actually functioning. ISFJs are often the operational backbone that allows more visible leaders to focus on strategy and relationships." },
+        { title: "Dietitian or Nutritional Counselor", reason: "Detailed, individualized support for a person's long-term physical wellbeing — work that requires both Si precision about nutritional science and Fe sensitivity to the emotional relationship people have with food and their bodies." }
+      ],
+      relationships: "ISFJs are among the most attentive and selflessly devoted partners of any type. They remember every preference, every difficult day, every anniversary — not because they are tracking it mechanically but because the people they love genuinely matter to them and the details of those lives are worth holding. They show love through consistent, often invisible acts of care: the meal that appears when you are exhausted, the errand remembered before you had to ask. The growth edge is learning to receive care with the same graciousness with which they give it, and to voice their own needs explicitly rather than hoping they will be noticed and met. Partners who stay actively attentive to what ISFJs need — and who name it when they see it — will earn a loyalty that is essentially unconditional.",
+      growth: "ISFJs grow by learning that advocating for their own needs is not a betrayal of their caring nature — it is a necessary act of self-respect that ultimately makes them more sustainable as a partner, colleague, and friend. Developing the habit of naming what they need clearly and early — before resentment has a chance to build quietly — is the single highest-leverage growth practice for most ISFJs. Exploring new approaches and experiences with curiosity rather than caution will also expand the rich inner world that is their greatest private asset.",
+      compatibility: ["ESFP", "ESTP", "ENFP", "INFP"]
     }
   },
 
   ESTJ: {
     name: "The Executive",
-    emoji: "📊",
-    tagline: "Excellent administrators, unsurpassed at managing things — or people.",
+    emoji: "⚖️",
+    tagline: "Order, accountability, and results — ESTJs are the people who make sure things actually get done, and done right.",
     free: {
-      overview: "ESTJs are organized, logical, and assertive individuals who thrive on bringing order to their environment. They are natural administrators who take charge and get things done efficiently. ESTJs value tradition, rules, and clear expectations, and they lead by example with their strong work ethic.",
-      strengths: [
-        "Excellent organizational skills",
-        "Strong leadership and delegation",
-        "Dedicated and hardworking",
-        "Direct and honest communication",
-        "Loyal to their commitments"
-      ],
-      weaknesses: [
-        "Can be inflexible and stubborn",
-        "May steamroll others' opinions",
-        "Difficulty with emotional expression",
-        "Judgmental of those who don't meet standards",
-        "Struggle to relax and unwind"
-      ]
+      overview: "ESTJs are organized, decisive, and deeply principled leaders who bring structure, accountability, and clarity to everything they touch. Their dominant Extraverted Thinking means they are constantly assessing how to make systems more efficient and people more productive — and they back this assessment with a natural authority that others find easy to follow. They believe in established institutions, clear roles, and the idea that hard work and reliable follow-through are the foundations of any life worth living.",
+      strengths: ["Exceptional organizational and administrative capability at any scale", "Decisive and confident in taking charge when direction is needed", "Highly reliable and consistent in meeting every obligation they accept", "Direct and clear communicator who sets unambiguous expectations", "Strong belief in accountability — for themselves as much as anyone else"],
+      weaknesses: ["Can come across as rigid or dismissive when unconventional approaches are proposed", "May treat emotional or intuitive perspectives as irrelevant or inefficient", "Tendency to prioritize rules and procedure over individual circumstances", "Can be blunt to the point of seeming unkind, especially under pressure", "May struggle to see value in approaches that lack historical precedent"]
     },
     premium: {
-      careers: ["Business Manager", "Judge", "School Principal", "Insurance Agent", "Real Estate Agent", "Building Inspector", "Military Leader", "Financial Advisor"],
-      relationships: "ESTJs are stable, committed partners who show love by creating security and structure. They take their relationship responsibilities seriously and work hard to provide. They need a partner who respects their need for order while gently encouraging them to be more emotionally open.",
-      growth: "ESTJs grow by developing emotional awareness and learning to listen to others' perspectives without immediately judging. Recognizing that rules and traditions serve people — not the other way around — helps them become more empathetic leaders.",
-      compatibility: ["ISTP", "INTP", "ISTJ", "ESFJ"]
+      workAptitude: "You are a natural organizer and executor who performs at your best in leadership roles where you have real authority to build systems, set standards, and hold people accountable. You thrive in structured, performance-driven environments with clear metrics — places where reliability and results are the currency. Be mindful that your efficiency-first orientation can occasionally clash with colleagues who process change more slowly or who need more relational investment than you instinctively offer. Your professional superpower is turning plans into results at scale; the complement to that superpower is learning when to slow down and bring people along rather than simply moving ahead.",
+      careers: [
+        { title: "Operations Director", reason: "Te systematic thinking about efficiency and process combined with Si institutional memory of what has worked creates the ideal operations mind — one that can both design and defend the systems that keep large organizations functional." },
+        { title: "Judge or Magistrate", reason: "Consistent, authoritative application of established law without sentimentality or deviation from principle. ESTJs in judicial roles are often described as firm but fair — and they consider that the highest professional compliment." },
+        { title: "Military Commander", reason: "Command structure, clear performance standards, and decisive execution under pressure are the native elements of the ESTJ's professional world. The expectation of absolute reliability from every member of a unit is one they set and meet without exception." },
+        { title: "Hospital Administrator", reason: "Managing complex institutional systems — staff, scheduling, compliance, patient flow — with the accountability and order that healthcare demands requires exactly the Te/Si profile that ESTJs bring to large-scale administration." },
+        { title: "Financial Controller", reason: "Systematic oversight of organizational finances, enforcement of accounting standards, and clear accountability for every line item suits Te precision and the ESTJ's fundamental belief that numbers should add up and people should answer for them when they don't." },
+        { title: "Law Enforcement Officer", reason: "Si respect for established order and community standards combined with Te willingness to enforce those standards with consistency and authority. ESTJs who enter law enforcement often advance quickly because they are exactly as reliable as the role requires." },
+        { title: "School Superintendent", reason: "Administrative leadership of large educational institutions — managing policy, personnel, budgets, and community expectations simultaneously — rewards the ESTJ's ability to hold complex systems accountable to measurable outcomes." },
+        { title: "Large-Scale Project Manager", reason: "Holding multi-team, multi-year projects to schedule, scope, and budget through sheer organizational discipline and relentless follow-through is the kind of work ESTJs are both naturally capable of and genuinely satisfied by." }
+      ],
+      relationships: "ESTJs are loyal, clear-eyed, and straightforwardly devoted partners who express love through provision, action, and reliability rather than elaborate emotional performance. They take their commitments seriously and rarely walk away from a relationship they have decided is worth having — their word is their bond, and they extend this integrity fully to the people they love. Partners who appreciate directness, who want a dependable presence rather than an unpredictable one, and who don't require constant emotional processing will find ESTJs among the most solid and trustworthy companions available. The growth edge is learning to slow down and engage with their partner's emotional world on its own terms — not as a problem to be solved, but as a legitimate reality to be understood and genuinely honored.",
+      growth: "ESTJs grow by developing real curiosity about others' internal emotional experiences rather than dismissing feelings as irrational or inefficient. Recognizing that people's emotional responses are real data — even when they don't follow a logical pattern — will make them significantly more effective as leaders, partners, and friends. Learning to hold space for approaches that differ from their own, and to occasionally follow someone else's lead without immediately needing to improve on it, are the practices that round out the most powerful version of this type.",
+      compatibility: ["ISFP", "INFP", "ISTP", "ISTJ"]
     }
   },
 
   ESFJ: {
     name: "The Consul",
-    emoji: "🤝",
-    tagline: "Extraordinarily caring, social, and popular people, always eager to help.",
+    emoji: "🤗",
+    tagline: "Attentive and warm to their core, ESFJs are the social glue that holds communities together — and they would not have it any other way.",
     free: {
-      overview: "ESFJs are warm-hearted, conscientious individuals who are deeply attuned to the emotional needs of others. They thrive in social settings and find fulfillment in creating harmony and helping their community. ESFJs are often the social glue that holds groups together with their genuine care and organizational skills.",
-      strengths: [
-        "Warm and genuinely caring for others",
-        "Excellent social and networking skills",
-        "Practical and organized helpers",
-        "Loyal and committed to relationships",
-        "Strong sense of duty and community"
-      ],
-      weaknesses: [
-        "Overly concerned with social status",
-        "Difficulty accepting criticism",
-        "Too focused on others' approval",
-        "Reluctant to step outside comfort zone",
-        "May suppress their own needs to avoid conflict"
-      ]
+      overview: "ESFJs are warm, organized, and socially gifted personalities who are at their best when the people around them are genuinely thriving. Their dominant Extraverted Feeling makes them extraordinarily attuned to the social and emotional climate of any group, while Introverted Sensing grounds this attentiveness in a rich memory for people's preferences, histories, and needs. They are natural community-builders who create a sense of belonging wherever they go — often without realizing they are doing it.",
+      strengths: ["Exceptional interpersonal warmth and social attentiveness in every setting", "Natural ability to create genuine belonging and community among diverse groups", "Highly organized and reliable in meeting both practical and emotional obligations", "Deeply loyal and committed to the people and communities they care about", "Skilled at anticipating and meeting others' needs — often before being asked"],
+      weaknesses: ["Can take criticism of their efforts very personally and deeply", "Tendency to seek social approval and be sensitive to rejection or disappointment", "May suppress their own needs and opinions to maintain group harmony", "Can be inflexible when established social norms or traditions are challenged", "May struggle to make important decisions independently of others' input"]
     },
     premium: {
-      careers: ["Healthcare Administrator", "Event Coordinator", "Guidance Counselor", "Public Relations Specialist", "Hospitality Manager", "Dental Hygienist", "Sales Representative", "Elementary School Teacher"],
-      relationships: "ESFJs are attentive, loving partners who create a nurturing environment for their relationships. They remember small details, celebrate milestones, and work hard to make their partner feel valued. They need partners who openly express appreciation and affection.",
-      growth: "ESFJs grow by developing internal validation rather than relying on others' approval. Learning to embrace constructive criticism as a tool for growth and recognizing that saying no can strengthen rather than damage relationships is transformative for them.",
-      compatibility: ["ISFP", "ISTP", "ESFP", "ESTJ"]
+      workAptitude: "You thrive in collaborative, people-centered environments where your warmth, attentiveness, and team-building instincts are recognized as genuine professional assets. You naturally create the kind of positive, cohesive workplace culture that organizations spend enormous energy trying to engineer — and you do it effortlessly through consistent acts of care and attention. Healthcare, education, event management, and client-facing roles are natural fits. Be mindful that emotionally cold or highly competitive workplaces can wear on you more than they do other types, and that your tendency to absorb others' stress as your own is a professional liability worth managing deliberately.",
+      careers: [
+        { title: "Event Planner or Wedding Coordinator", reason: "Fe for reading exactly what each client needs the event to feel like, combined with Si for the meticulous execution of every detail that makes the vision real. ESFJs in this field often describe it as one of the few professions that rewards caring about everything simultaneously." },
+        { title: "Registered Nurse", reason: "Fe genuine warmth and Si attentive memory for each patient's history, preferences, and subtle changes combine to create the kind of nursing care that families remember and patients specifically request on return visits." },
+        { title: "Elementary School Teacher", reason: "Creating warm, structured, emotionally safe learning environments where children feel seen as individuals — not just students — is a daily expression of everything Fe and Si together make natural for ESFJs." },
+        { title: "Human Resources Manager", reason: "Cultural stewardship of an entire organization, combined with interpersonal attentiveness to the specific needs and conflicts of real people at every level. ESFJs in HR often become the emotional heartbeat of the workplaces they serve." },
+        { title: "Sales Representative", reason: "Genuine rapport built on Fe warmth combined with Si memory for every client's preferences, history, and context creates relationship-based selling that produces loyalty rather than just transactions. Clients of ESFJ sales professionals often don't consider switching." },
+        { title: "Physical or Occupational Therapist", reason: "The slow, relational, patient-centered work of helping someone recover or adapt requires both the genuine emotional attentiveness of Fe and the methodical precision of Si — a combination ESFJs bring naturally and sustain over long treatment relationships." },
+        { title: "Restaurant or Hospitality Manager", reason: "Coordinating staff and guests simultaneously with warmth, order, and constant attentiveness to the felt experience of everyone in the building is exactly the multidimensional social management that ESFJs were built to perform." },
+        { title: "Family Physician or General Practitioner", reason: "Long-term, relationship-based healthcare where Fe warmth builds the trust that makes patients honest and Si memory for each patient's complete history makes that trust clinically useful — medicine the way most patients wish it always worked." }
+      ],
+      relationships: "ESFJs are warm, thoughtful, and actively devoted partners who keep careful track of what matters to the people they love and act on that knowledge constantly and without being asked. They create an atmosphere of care and welcome in their relationships that most people find deeply comforting — life with an ESFJ tends to feel organized, emotionally warm, and genuinely cared-for. The challenge is a tendency to define the relationship's health by its surface harmony — sometimes avoiding difficult but necessary conversations because conflict feels like failure. Partners who approach hard topics with warmth and clear reassurance, and who express appreciation explicitly and often, will get the best of what ESFJs have to offer: consistent, wholehearted, and genuinely nurturing love.",
+      growth: "ESFJs grow by developing confidence in their own judgment independent of social validation. Learning to hold an opinion — and defend it when challenged — is not disloyalty to the group; it is the kind of authentic self-expression that makes relationships genuinely mutual rather than just harmonious. Building tolerance for conflict as a healthy and even productive part of intimacy, rather than a sign that something has gone fundamentally wrong, will make ESFJs significantly more effective in every relationship they truly care about.",
+      compatibility: ["ISFP", "INFP", "ISTP", "ISTJ"]
     }
   },
 
   ISTP: {
     name: "The Virtuoso",
     emoji: "🔧",
-    tagline: "Bold and practical experimenters, masters of all kinds of tools.",
+    tagline: "Bold and practical experimenters, masters of tools and techniques — ISTPs thrive where others freeze.",
     free: {
-      overview: "ISTPs are curious, hands-on individuals who love understanding how things work. They approach life with quiet confidence and a preference for action over words. ISTPs are natural troubleshooters who combine practical skills with sharp analytical thinking to solve problems in real-time.",
-      strengths: [
-        "Excellent hands-on problem-solving",
-        "Calm and rational under pressure",
-        "Highly adaptable and practical",
-        "Independent and self-reliant",
-        "Quick learning through direct experience"
-      ],
-      weaknesses: [
-        "Emotionally detached and private",
-        "Can be insensitive to feelings",
-        "Risk-taking behavior",
-        "Difficulty with long-term commitments",
-        "Easily bored by routine"
-      ]
+      overview: "ISTPs are cool, analytical, and action-oriented problem-solvers who engage with the world through hands-on experimentation and logical precision. Their dominant Introverted Thinking gives them an instinctive ability to understand how mechanical and logical systems work, while Extraverted Sensing keeps them intensely present and responsive to the physical world around them. They are the ultimate pragmatists — less interested in theory for its own sake than in the deep satisfaction of making something broken work again. When a crisis hits, ISTPs are often the calmest person in the room.",
+      strengths: ["Exceptional ability to diagnose and solve mechanical or technical problems", "Calm and decisive under pressure when others lose their footing", "Highly independent, self-reliant, and resourceful in unexpected situations", "Curious and genuinely enthusiastic about hands-on experimentation", "Adaptable and unfazed by rapidly changing circumstances"],
+      weaknesses: ["Can appear emotionally detached or indifferent to others' feelings", "May struggle with long-range planning and sustained follow-through", "Tendency toward risk-taking that can alarm more cautious people", "Can be intensely private to the point of seeming unknowable to partners", "May lose interest and motivation once a problem is solved and routine sets in"]
     },
     premium: {
-      careers: ["Mechanical Engineer", "Forensic Scientist", "Pilot", "Paramedic", "Software Developer", "Civil Engineer", "Electrician", "Athletic Trainer"],
-      relationships: "ISTPs show love through actions — fixing things, solving problems, and sharing activities. They value a partner who gives them space and doesn't demand constant emotional engagement. They are loyal but need significant independence within the relationship.",
-      growth: "ISTPs grow by developing comfort with emotional expression and vulnerability. Learning that sharing feelings with trusted people is a form of strength, not weakness, helps them build deeper and more satisfying personal connections.",
-      compatibility: ["ESTJ", "ESFJ", "ENTJ", "ISTJ"]
+      workAptitude: "You perform at your highest level in hands-on, technically demanding environments where your ability to analyze a system, diagnose what's wrong, and fix it under pressure is a direct asset. You need real problems with real stakes — abstract theorizing without practical application will bore you quickly. Autonomy matters enormously to you; micromanagement or excessive process overhead are among the fastest ways to lose your engagement. Your ability to stay calm and act decisively in crisis situations is a rare professional quality that high-stakes fields actively need — and often undervalue until the moment they desperately depend on it.",
+      careers: [
+        { title: "Mechanical or Aerospace Engineer", reason: "Ti systematic analysis of how physical systems work combined with Se hands-on engagement with real materials and forces creates the ideal engineering mind — one that designs with both elegance and practical reliability as the standard." },
+        { title: "Emergency Room Physician", reason: "Staying genuinely calm while making rapid, high-stakes diagnostic decisions under maximum time pressure is the specific professional demand that matches the ISTP's natural operating mode. They experience the ER not as chaos but as a highly technical puzzle with immediate feedback." },
+        { title: "Military Pilot or Commercial Aviator", reason: "Real-time technical mastery of complex aircraft systems combined with composure under pressure and the ability to improvise when instruments or conditions deviate from plan. ISTPs in aviation describe the cockpit as one of the few places where everything they are is exactly what the job requires." },
+        { title: "Forensic Scientist", reason: "Ti logical deduction from physical evidence combined with Se attentiveness to concrete, observable detail — every conclusion must be supported by what is actually there, with no room for speculation. ISTPs find detective-style analytical work deeply satisfying for exactly this reason." },
+        { title: "Software Developer", reason: "Ti precision in code logic combined with Se satisfaction in seeing that code run and do something tangible in the real world. ISTPs who find programming often describe it as the most intellectually honest work they have encountered — it either works or it doesn't." },
+        { title: "Skilled Tradesperson or Electrician", reason: "Hands-on mastery of technical systems with immediate, visible real-world feedback is the professional ideal for most ISTPs. The satisfaction of a system that functions correctly because you made it so is one they can experience multiple times in a single workday." },
+        { title: "Stock Trader or Financial Analyst", reason: "Real-time decision-making under genuine performance pressure with direct, immediate, and measurable consequences. ISTPs in trading find that the market's refusal to care about your feelings is actually a relief — it rewards accuracy, not personality." },
+        { title: "Athletic Coach or Performance Specialist", reason: "Practical, evidence-based approach to physical performance optimization — breaking down technique into its component parts, identifying the precise adjustment needed, and seeing the result immediately in improved output." }
+      ],
+      relationships: "ISTPs are private, independent partners who offer loyalty and genuine respect without emotional theater. They show care through action — fixing what is broken, being present when it matters, and offering practical help without waiting to be asked. Their inferior Extraverted Feeling means they are more emotionally perceptive than they typically let on, but expressing what they feel requires real trust and exactly the right conditions. Partners who interpret ISTP silence as distance or indifference will consistently misread them — what looks like detachment is often deep contentment or focused attention directed elsewhere. The best partners for ISTPs give them genuine autonomy within the relationship, don't require constant emotional processing, and can appreciate the understated but completely real ways ISTPs show up for the people they care about.",
+      growth: "ISTPs grow by learning to communicate their inner experience more openly — not because they owe it to anyone, but because the people who love them cannot read their contentment as clearly as they experience it. Occasionally naming what they feel bridges a gap that silence cannot close, and builds the kind of mutual understanding that their most important relationships deserve. Developing longer-horizon commitments and following through on them even after the initial challenge has been mastered is the professional and personal growth edge that unlocks the most complete version of this type.",
+      compatibility: ["ESTJ", "ENTJ", "ENFJ", "ESFJ"]
     }
   },
 
   ISFP: {
     name: "The Adventurer",
     emoji: "🎨",
-    tagline: "Flexible and charming artists, always ready to explore and experience something new.",
+    tagline: "Flexible and charming artists, always ready to explore and experience something new — on their own quiet terms.",
     free: {
-      overview: "ISFPs are gentle, sensitive individuals with a strong aesthetic sense and a desire to live authentically. They experience the world intensely through their senses and emotions, and they express themselves through art, nature, and meaningful actions rather than words.",
-      strengths: [
-        "Strong aesthetic and artistic sense",
-        "Deeply caring and empathetic",
-        "Flexible and open to new experiences",
-        "Live authentically by their values",
-        "Charming and warm in one-on-one settings"
-      ],
-      weaknesses: [
-        "Difficulty with long-term planning",
-        "Overly sensitive to criticism",
-        "Avoidance of conflict and confrontation",
-        "Tendency to undervalue their abilities",
-        "Can be unpredictable and hard to pin down"
-      ]
+      overview: "ISFPs are gentle, authentic, and intensely present personalities who experience the world through their senses and their deeply held inner values. Their dominant Introverted Feeling gives them a rich, private emotional life that they rarely expose but that quietly informs everything they do, while Extraverted Sensing makes them keenly attuned to beauty, sensation, and the physical reality of the present moment. They are among the most genuinely humble of all types — confident in their craft and clear in their values, but rarely interested in drawing attention to themselves.",
+      strengths: ["Deeply authentic and consistently true to their personal values in every choice", "Keenly attuned to beauty, aesthetics, and sensory experience in all its forms", "Warm and caring without being intrusive, demanding, or performative", "Highly adaptable and genuinely comfortable with spontaneous change", "Creative and skilled in hands-on, expressive, or artistic pursuits"],
+      weaknesses: ["Can be overly sensitive to criticism, especially of their creative work or values", "Tendency to avoid conflict to the point of not voicing important needs", "May struggle with long-range planning and future-oriented thinking", "Can be difficult to read — private about feelings even with close partners", "May lose motivation entirely in environments that conflict with their values"]
     },
     premium: {
-      careers: ["Graphic Designer", "Photographer", "Chef", "Veterinarian", "Physical Therapist", "Fashion Designer", "Landscape Architect", "Music Teacher"],
-      relationships: "ISFPs are devoted, gentle partners who express love through thoughtful gestures, quality time, and physical affection. They create beauty in the everyday moments of a relationship. They need a partner who appreciates their quiet depth and doesn't try to change their gentle nature.",
-      growth: "ISFPs grow by developing confidence in their abilities and learning to advocate for themselves. Stepping outside their comfort zone to share their talents with the world and setting clear personal goals gives direction to their natural creativity.",
-      compatibility: ["ENFJ", "ESFJ", "ESTJ", "ENTJ"]
+      workAptitude: "You thrive in environments that honor your need for authentic expression, creative latitude, and work that engages your senses and your values simultaneously. Design, craft, music, healthcare, and any field where skill is demonstrated through tangible, beautiful, or caring output tends to align with your temperament. Rigid hierarchies, high-conflict cultures, or roles that require sustained impersonal detachment will erode your motivation quietly but consistently. You do your best work when you feel trusted to approach a task in your own way — the output is often quietly exceptional, even when no one is watching.",
+      careers: [
+        { title: "Fine Artist or Sculptor", reason: "Fi aesthetic depth and personal values given physical form through Se mastery of the material medium. ISFPs who find their artistic voice often describe the work as less like a career and more like a responsibility — the thing they would do regardless." },
+        { title: "Fashion or Textile Designer", reason: "Personal values and emotional sensibility expressed through visual form and physical material — work that is simultaneously deeply personal and intended to be worn and experienced by real people in the real world." },
+        { title: "Physical Therapist or Massage Therapist", reason: "Se hands-on precision in reading and responding to the physical body combined with Fi genuine care for each individual's wellbeing and recovery. ISFPs in therapeutic roles develop an almost intuitive sense of what a patient needs before the patient can articulate it." },
+        { title: "Chef or Pastry Chef", reason: "Se mastery of flavor, texture, aroma, and visual presentation as a form of authentic personal expression. ISFPs who find cooking often describe it as one of the few professions where all their senses and all their values are engaged simultaneously." },
+        { title: "Veterinarian or Animal Care Specialist", reason: "Fi compassion for living creatures who cannot advocate for themselves combined with Se attentiveness to subtle physical signs of distress or improvement. ISFPs in veterinary roles often cite their patients' inability to pretend as one of the most refreshing aspects of the work." },
+        { title: "Interior Designer or Set Designer", reason: "Translating a personal aesthetic vision into sensory environments that other people actually live and work in — work that requires both Fi creative authenticity and Se mastery of how physical spaces feel from the inside." },
+        { title: "Landscape Architect", reason: "Creating beautiful, functional outdoor spaces that engage the senses and respond to the natural world in a way that only someone deeply attuned to physical beauty and ecological authenticity could design." },
+        { title: "Park Ranger or Conservation Officer", reason: "Protecting natural beauty through direct, present-moment engagement with the natural world — work that satisfies both Fi's values-based commitment to what matters and Se's need to be physically immersed in the environment being protected." }
+      ],
+      relationships: "ISFPs are quietly devoted, deeply feeling partners who love with a genuineness that is unmistakable — even when they struggle to put it into words. Their Fi means their feelings run very deep, and they choose their closest relationships with the same care they bring to their creative work — deliberately, and only when something feels authentically right. They show love through physical presence, small acts of beauty and care, and a quality of attention that makes their partner feel genuinely seen rather than merely included. The challenge is a private interior world that can feel impenetrable to partners who process emotions verbally — ISFPs feel profoundly but often don't narrate it. Partners who can appreciate quiet devotion, who create safety for ISFP self-expression without pressure, and who reciprocate with the same genuine quality of presence will find one of the most authentically loving companions of any type.",
+      growth: "ISFPs grow by developing the courage to voice their needs and limits directly rather than withdrawing silently when something doesn't feel right. A partner or colleague who doesn't know what they did wrong cannot change — and ISFPs who learn to name their experience clearly, even imperfectly, protect the relationships that matter most to them. Building enough practical structure to translate creative vision and genuine caring into completed, lasting work — rather than beautiful starts that remain unfinished — is the professional growth edge that allows the full depth of their gifts to show up in the world.",
+      compatibility: ["ESTJ", "ESFJ", "ENFJ", "ENTJ"]
     }
   },
 
   ESTP: {
     name: "The Entrepreneur",
-    emoji: "🎯",
-    tagline: "Smart, energetic, and very perceptive people who truly enjoy living on the edge.",
+    emoji: "🏎️",
+    tagline: "Smart, energetic, and perceptive — ESTPs live for the thrill of the moment and the satisfaction of making things happen right now.",
     free: {
-      overview: "ESTPs are energetic, action-oriented individuals who live in the moment and love excitement. They are natural risk-takers with a keen eye for opportunity and a talent for thinking on their feet. ESTPs are direct, pragmatic, and bring an infectious energy to everything they do.",
-      strengths: [
-        "Excellent crisis management skills",
-        "Direct and results-oriented",
-        "Perceptive and observant",
-        "Energetic and fun to be around",
-        "Resourceful and adaptable"
-      ],
-      weaknesses: [
-        "Impatient with theory and abstract concepts",
-        "Risk-taking without considering consequences",
-        "Difficulty with long-term planning",
-        "Can be insensitive and blunt",
-        "Easily bored and restless"
-      ]
+      overview: "ESTPs are energetic, perceptive, and action-oriented personalities who are at their absolute best when things are happening in real time. Their dominant Extraverted Sensing means they are extraordinarily tuned in to their immediate environment — reading rooms, spotting opportunities, and responding to what is actually happening rather than what was planned. Introverted Thinking gives this real-time awareness a sharp analytical edge, allowing ESTPs to make quick, accurate assessments under pressure. They are natural performers and pragmatists who would rather be in the middle of the action than planning for it from the sidelines.",
+      strengths: ["Exceptional ability to read people and situations accurately in real time", "Bold, decisive, and genuinely comfortable with risk and uncertainty", "Naturally persuasive and charismatic — especially in person and under pressure", "Highly adaptable and consistently effective when circumstances change suddenly", "Practical problem-solver who acts first and theorizes later — and usually gets it right"],
+      weaknesses: ["Can act impulsively without fully considering longer-term consequences", "Tendency to get bored once a challenge has been solved or a goal achieved", "May be insensitive to others' emotional needs in fast-moving situations", "Can resist commitments that feel constraining or that limit spontaneous action", "May struggle with the sustained planning and follow-through that long-term goals require"]
     },
     premium: {
-      careers: ["Sales Director", "Emergency Room Doctor", "Stockbroker", "Detective", "Sports Coach", "Entrepreneur", "Paramedic", "Real Estate Developer"],
-      relationships: "ESTPs bring excitement, spontaneity, and fun to relationships. They show love through shared adventures and practical gestures. They need a partner who enjoys their energetic lifestyle while helping them slow down occasionally to connect on a deeper emotional level.",
-      growth: "ESTPs grow by developing patience and considering long-term consequences before acting. Learning to sit with uncomfortable emotions rather than seeking distraction through action helps them build deeper self-awareness and more meaningful relationships.",
-      compatibility: ["ISFJ", "ISTJ", "ESFJ", "ISFP"]
+      workAptitude: "You are at your best in fast-paced, high-energy environments where quick thinking, physical presence, and the ability to read a situation in real time matter more than long-range planning. Sales, entrepreneurship, emergency response, and competitive business environments play directly to your strengths. The challenge to watch for is the desk-bound, long-horizon work that most career paths eventually require — strategic planning, documentation, and methodical execution are not your natural habitat. Pairing yourself with detail-oriented partners and building habits that capture your in-the-moment insights before they evaporate will make you significantly more effective over the long run.",
+      careers: [
+        { title: "Entrepreneur or Business Developer", reason: "Se opportunity recognition in real time combined with Ti rapid strategic assessment of viability creates the natural startup instinct. ESTPs don't wait for permission or perfect information — they move when the window is open, and they are usually right about how long it stays open." },
+        { title: "Sales Director or Business Development Lead", reason: "Real-time reading of prospects and the room, combined with bold closing instincts and Ti precision in understanding what the other side actually wants, creates a sales professional who wins on relationship and intelligence rather than script." },
+        { title: "Emergency Medical Technician or Paramedic", reason: "Decisive action under maximum pressure with immediate life-or-death stakes — the professional environment that most closely matches the ESTP's natural mode of being fully alive and fully competent at exactly the same moment." },
+        { title: "Criminal Defense Attorney", reason: "Live courtroom performance under pressure, rapid logical response to unexpected testimony, and the ability to read a jury in real time makes trial law one of the few professions that rewards the full ESTP profile in a single role." },
+        { title: "Investment Trader", reason: "Real-time market reading under genuine performance pressure with immediate, visible, and fully measurable feedback on every decision. ESTPs in trading find that the market's indifference to their feelings is one of its most appealing qualities." },
+        { title: "Professional Athlete or Athletic Coach", reason: "Se mastery of physical performance in high-stakes competitive environments — and the coaching version: reading athletes' bodies and confidence in real time and making the precise adjustment that changes the outcome." },
+        { title: "Real Estate Developer or Broker", reason: "Deal-making, rapid site and market assessment, and negotiation under competitive conditions suit the ESTP's combination of real-time perceptiveness and Ti precision about value and risk." },
+        { title: "Film or Television Producer", reason: "Managing a fluid, high-budget, high-stakes production environment in real time — making dozens of decisions per day under conditions that change constantly and where indecision costs money. ESTPs in production are often the ones everyone else turns to when things go sideways." }
+      ],
+      relationships: "ESTPs are exciting, attentive, and genuinely enjoyable partners who bring spontaneity, warmth, and a talent for making ordinary moments feel alive. They are more emotionally perceptive than they often appear — their tertiary Extraverted Feeling makes them attuned to the mood of a room and to the people they care about — and they show affection through shared experiences, physical presence, and a generosity with their time and energy that feels completely natural rather than calculated. The challenge is a tendency to treat commitments as guidelines rather than anchors, and a restlessness that can make sustained emotional depth harder to sustain than it is to initiate. Partners who match their energy, give them genuine freedom within the relationship, and don't interpret their need for movement as a lack of care will find a devoted, playful, and genuinely engaged companion.",
+      growth: "ESTPs grow by developing a real relationship with longer-range consequences — the ones that their Se-dominant present-focus can underestimate until they arrive. Building the habit of pausing before significant decisions to consider what this choice looks like in six months — not just right now — will dramatically improve the sustainability of their outcomes. Developing genuine tolerance for the administrative and planning dimensions of meaningful goals is the unglamorous but essential complement to their natural and considerable talent for execution.",
+      compatibility: ["ISTJ", "ISFJ", "INTJ", "INFJ"]
     }
   },
 
   ESFP: {
     name: "The Entertainer",
-    emoji: "🎪",
-    tagline: "Spontaneous, energetic, and enthusiastic entertainers — life is never boring around them.",
+    emoji: "🎭",
+    tagline: "Spontaneous, energetic, and enthusiastic — ESFPs love life and are not shy about showing it.",
     free: {
-      overview: "ESFPs are vivacious, fun-loving individuals who embrace life with infectious enthusiasm. They are natural entertainers who love being around people and making others happy. ESFPs live fully in the present moment, bringing joy, spontaneity, and warmth to every situation they encounter.",
-      strengths: [
-        "Infectious positive energy",
-        "Excellent people skills",
-        "Practical and observant",
-        "Bold and original style",
-        "Natural ability to cheer others up"
-      ],
-      weaknesses: [
-        "Difficulty with long-term planning",
-        "Sensitive to criticism and conflict",
-        "Can be unfocused and easily distracted",
-        "May avoid deep or difficult conversations",
-        "Tendency toward impulsive decisions"
-      ]
+      overview: "ESFPs are vibrant, warm, and spontaneously generous personalities who approach life as a celebration to be fully participated in. Their dominant Extraverted Sensing means they are intensely alive to the present moment — its people, its colors, its possibilities — while Introverted Feeling ensures this engagement is always filtered through genuine personal values and authentic care for the people around them. They are among the most naturally joyful of all types, and their enthusiasm has an authenticity to it that makes it genuinely contagious rather than performative.",
+      strengths: ["Infectious warmth and enthusiasm that genuinely uplifts everyone around them", "Highly observant of people and their immediate emotional and physical needs", "Spontaneous and creative in finding fun and meaning in the present moment", "Deeply caring and generous with time, energy, and attention", "Adaptable and at ease across a wide variety of social situations and environments"],
+      weaknesses: ["Can struggle with planning ahead and long-term goal follow-through", "Tendency to avoid difficult conversations or necessary conflict", "May make impulsive decisions without fully considering downstream consequences", "Can be overly sensitive to criticism or social rejection", "May find it hard to stay focused in highly structured or routine-heavy environments"]
     },
     premium: {
-      careers: ["Event Planner", "Tour Guide", "Fitness Trainer", "Nurse", "Flight Attendant", "Interior Decorator", "Brand Ambassador", "Elementary Teacher"],
-      relationships: "ESFPs are generous, affectionate partners who make every day feel like an adventure. They express love through physical affection, fun activities, and enthusiastic support. They need a partner who matches their energy and brings them back to earth when needed without dampening their spirit.",
-      growth: "ESFPs grow by developing the ability to delay gratification and plan for the future. Learning to have difficult conversations rather than avoiding them, and finding meaning in solitude and reflection, adds depth to their naturally joyful approach to life.",
-      compatibility: ["ISFJ", "ISTJ", "ESFJ", "ESTP"]
+      workAptitude: "You bring contagious energy, genuine warmth, and a talent for making people feel immediately at ease — qualities that are enormously valuable in people-facing, performance-oriented, and service-driven roles. Entertainment, hospitality, sales, healthcare, and education all reward the kind of spontaneous human connection you create effortlessly. The professional challenge for ESFPs tends to be the administrative and planning dimensions of work — tasks that are solitary, repetitive, or disconnected from immediate human feedback. Building small organizational habits to manage these areas frees you to spend the majority of your time doing what you genuinely do best.",
+      careers: [
+        { title: "Actor or Live Performer", reason: "Se full presence in the moment combined with Fi authentic access to a genuine range of emotion — not performed from the outside but accessed from the inside. ESFPs in performance often describe it as the only time they feel completely at home in a professional setting." },
+        { title: "Event Coordinator or Experience Designer", reason: "Creating live experiences that make people feel genuinely alive and celebrated in the present moment — work that requires both Se attentiveness to every sensory detail and Fi instinct for what will emotionally land for this specific group of people." },
+        { title: "Sales Representative or Brand Ambassador", reason: "Se reading of the room combined with Fi genuine warmth creates relationship-based selling at its most natural — clients don't feel sold to, they feel taken care of. ESFP sales professionals often have the highest retention rates on any team." },
+        { title: "Early Childhood Educator or Childcare Provider", reason: "Spontaneous, warm, playful presence that children respond to immediately and without reservation — the classroom equivalent of the environment ESFPs naturally create wherever they go." },
+        { title: "Flight Attendant or Hospitality Manager", reason: "Se attentiveness to the physical environment and every person in it combined with Fi care for each individual's comfort and experience — the professional role that is essentially a formalized version of how ESFPs treat every room they enter." },
+        { title: "Musician or Live Performer", reason: "Fi emotional depth externalized through performance for a live audience that is right there with you — the immediate, physical feedback of a crowd responding to something real is the professional equivalent of Se and Fi working in perfect harmony." },
+        { title: "Personal Trainer or Group Fitness Instructor", reason: "Energizing individuals and groups through physical challenge with the kind of genuine warmth and Se-driven attentiveness to form, progress, and emotional readiness that makes people actually show up — and keep showing up." },
+        { title: "Social Media Content Creator", reason: "Authentic self-expression for an engaged audience that can feel the difference between content that is manufactured and content that is real — and ESFPs, whose enthusiasm is never performed, are among the most naturally compelling on camera." }
+      ],
+      relationships: "ESFPs are among the most warm, physically present, and spontaneously expressive partners of any type. They make their partners feel celebrated — noticed, appreciated, and genuinely enjoyed — through the small, constant, unplanned gestures that accumulate into a relationship that feels truly alive. Their Fi means their emotional world runs considerably deeper than their easy social surface suggests — they feel things profoundly, and they care about the people close to them with a sincerity that isn't always visible until it is really needed. The growth edge is developing tolerance for the difficult conversations and longer-range commitments that every meaningful relationship eventually requires. Partners who bring warmth and patience to these dimensions — rather than criticism or pressure — will draw out the most loyal and deeply feeling version of the ESFP.",
+      growth: "ESFPs grow by developing their relationship with the future — specifically by building enough forward-thinking habit to honor the commitments and plans their present-focused nature can sometimes undervalue. Learning to stay in difficult emotional conversations rather than deflecting with humor or energy, and developing the practical organizational habits that translate genuine caring into sustained and reliable action, will make them as dependable as they are lovable — and unlock the deepest version of every relationship they truly value.",
+      compatibility: ["ISTJ", "ISFJ", "INTJ", "INFJ"]
     }
   }
 };

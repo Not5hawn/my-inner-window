@@ -90,6 +90,7 @@
   function buildDimensionCard(dim, locked) {
     const profile = BIGFIVE_PROFILES[dim.key];
     const levelData = profile.free[dim.level];
+    const premiumData = profile.premium ? profile.premium[dim.level] : null;
     const poleLabel = dim.percentage >= 50 ? profile.poles[1] : profile.poles[0];
 
     return `
@@ -129,13 +130,43 @@
               `<div class="trait-list__item trait-list__item--strength">${t}</div>`
             ).join('')}
           </div>
+          ${premiumData ? `
+            <div class="premium-content">
+              ${premiumData.workAptitude ? `
+                <div class="premium-block">
+                  <h4 class="premium-block__title">💼 Work Aptitude</h4>
+                  <p class="result-section__text">${premiumData.workAptitude}</p>
+                </div>
+              ` : ''}
+              ${premiumData.relationships ? `
+                <div class="premium-block">
+                  <h4 class="premium-block__title">❤️ In Relationships</h4>
+                  <p class="result-section__text">${premiumData.relationships}</p>
+                </div>
+              ` : ''}
+              ${premiumData.careers ? `
+                <div class="premium-block">
+                  <h4 class="premium-block__title">🎯 Best-Fit Careers</h4>
+                  <ul class="premium-career-list">
+                    ${premiumData.careers.map(c => `<li>${c}</li>`).join('')}
+                  </ul>
+                </div>
+              ` : ''}
+              ${premiumData.growth ? `
+                <div class="premium-block">
+                  <h4 class="premium-block__title">🌱 Growth Strategy</h4>
+                  <p class="result-section__text">${premiumData.growth}</p>
+                </div>
+              ` : ''}
+            </div>
+          ` : ''}
         ` : ''}
       </div>
     `;
   }
 
-  // All dimension detail cards are paywalled
-  const premiumCardsHTML = dimensions.map(dim => buildDimensionCard(dim, true)).join('');
+  // Build cards locked or unlocked based on purchase status
+  const premiumCardsHTML = dimensions.map(dim => buildDimensionCard(dim, !isPremium)).join('');
 
   container.innerHTML = `
     <!-- Profile Header -->

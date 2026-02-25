@@ -643,6 +643,87 @@
   font-style: italic;
 }
 
+/* ---- MBTI Career List ---- */
+.career-list {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.career-item {
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(168, 85, 247, 0.05);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent-teal);
+}
+
+.career-item__title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.career-item__num {
+  color: var(--accent-teal);
+  font-weight: 700;
+  margin-right: var(--space-xs);
+}
+
+.career-item__reason {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: var(--lh-loose);
+  margin: 0;
+}
+
+/* ---- Premium Content Blocks (unlocked cards) ---- */
+.premium-content {
+  margin-top: var(--space-xl);
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-xl);
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.premium-block__title {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.premium-career-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.premium-career-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(168, 85, 247, 0.05);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+}
+
+.premium-career-list li::before {
+  content: '→';
+  color: var(--accent-teal);
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .premium-career-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- Premium Unlocked State ---- */
 .premium-unlocked .premium-teaser__fade {
   max-height: none;

@@ -165,12 +165,19 @@
             </div>
           </div>
 
+          <!-- Work Aptitude -->
+          ${premium.workAptitude ? `
+          <div class="result-section">
+            <h2 class="result-section__title">💼 Work Aptitude</h2>
+            <p class="result-section__text">${premium.workAptitude}</p>
+          </div>` : ''}
+
           <!-- Top careers -->
           <div class="result-section">
             <h2 class="result-section__title">Top Career Paths for Type ${dominant}</h2>
-            <div class="trait-list">
-              ${premium.careers.slice(0, 3).map((c, i) =>
-                `<div class="trait-list__item trait-list__item--strength"><strong>${i + 1}.</strong> ${c}</div>`
+            <div class="career-list">
+              ${premium.careers.map((c, i) =>
+                `<div class="career-item"><div class="career-item__title"><span class="career-item__num">${i + 1}.</span> ${c}</div></div>`
               ).join('')}
             </div>
           </div>
@@ -204,10 +211,11 @@
       <div class="premium-overlay">
         <div class="premium-overlay__icon">🔒</div>
         <h2 class="premium-overlay__title">Want the Full Breakdown?</h2>
-        <p class="premium-overlay__text">Unlock your complete Type ${dominant} deep-dive — career paths, compatibility, relationship advice, and personal growth roadmap.</p>
+        <p class="premium-overlay__text">Unlock your complete Type ${dominant} deep-dive — work aptitude, career paths, compatibility, relationship advice, and personal growth roadmap.</p>
         <div class="premium-overlay__price">$1.99</div>
         <p class="premium-overlay__price-note">One-time payment — lifetime access</p>
         <ul class="premium-features">
+          <li>Work aptitude & professional strengths</li>
           <li>Top career paths ranked for your type</li>
           <li>Type compatibility breakdown</li>
           <li>In-depth relationship & love guide</li>

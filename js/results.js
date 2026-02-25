@@ -148,13 +148,28 @@
             </div>
           </div>
 
+          <!-- Work Aptitude -->
+          ${premium.workAptitude ? `
+          <div class="result-section">
+            <h2 class="result-section__title">💼 Work Aptitude</h2>
+            <p class="result-section__text">${premium.workAptitude}</p>
+          </div>
+          ` : ''}
+
           <!-- Top careers -->
           <div class="result-section">
             <h2 class="result-section__title">Top Career Paths for ${typeCode}</h2>
-            <div class="trait-list">
-              ${premium.careers.slice(0, 3).map((c, i) =>
-                `<div class="trait-list__item trait-list__item--strength"><strong>${i + 1}.</strong> ${c}</div>`
-              ).join('')}
+            <div class="career-list">
+              ${premium.careers.map((c, i) => {
+                const title = typeof c === 'object' ? c.title : c;
+                const reason = typeof c === 'object' ? c.reason : null;
+                return `
+                  <div class="career-item">
+                    <div class="career-item__title"><span class="career-item__num">${i + 1}.</span> ${title}</div>
+                    ${reason ? `<p class="career-item__reason">${reason}</p>` : ''}
+                  </div>
+                `;
+              }).join('')}
             </div>
           </div>
 
@@ -175,9 +190,9 @@
             </div>
           </div>
 
-          <!-- Relationships & growth -->
+          <!-- Relationships & Love -->
           <div class="result-section">
-            <h2 class="result-section__title">Relationships & Love</h2>
+            <h2 class="result-section__title">❤️ Relationships & Love</h2>
             <p class="result-section__text">${premium.relationships}</p>
           </div>
         </div>
